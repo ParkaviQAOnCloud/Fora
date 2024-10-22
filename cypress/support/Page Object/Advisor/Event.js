@@ -91,6 +91,10 @@ class Event{
    {
     return cy.get('[class="flex justify-center pt-0.5"]')
    }
+   get todaydate_BackgroundColor()
+   {
+    return cy.xpath('//div[@class="rounded-xl w-[34px] h-[34px] text-[15px] leading-[34px] bg-main text-white"]')
+   }
   
    get Copytogooglecalendar()
    {
@@ -116,9 +120,10 @@ class Event{
    {
     return cy.xpath('/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]')
    }
-   get ()
+   get List_Events()
    {
-    return cy.xpath('')
+    return cy.xpath('//h2[@class="mt-6 tablet:mt-0"]')
    }
+   
 }
 export default new Event;

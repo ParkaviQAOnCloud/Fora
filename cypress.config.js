@@ -135,10 +135,15 @@ specPattern: [
 
 //'cypress/e2e/Unit_TestCases/M1_Clients/TS011_Clients.cy.js'
 //'cypress/e2e/Unit_TestCases/M2_Events/TS001_Events.cy.js',
-'cypress/e2e/Unit_TestCases/M2_Events/TS002_Events.cy.js',
+//'cypress/e2e/Unit_TestCases/M2_Events/TS002_Events.cy.js',
+//'cypress/e2e/Unit_TestCases/M2_Events/TS003_Events.cy.js',
 
-//'cypress/e2e/E2E_TestCases/M2_Events/TS001_Clients_E2E.cy.js'
+//'cypress/e2e/E2E_TestCases/M2_Events/TS001_Events_E2E.cy.js',
+//'cypress/e2e/E2E_TestCases/M2_Events/TS002_Events_E2E.cy.js',
+'cypress/e2e/E2E_TestCases/M2_Events/TS003_Events_E2E.cy.js',
 ]
+
+
 },
    setupNodeEvents(on, config) {
  
