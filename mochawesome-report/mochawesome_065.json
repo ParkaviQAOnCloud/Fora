@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-19T03:55:16.143Z",
+    "end": "2024-09-19T03:55:57.001Z",
+    "duration": 40858,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "357f6838-5883-474a-ae17-6ad4ac803dd5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Leads_TS002.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Leads_TS002.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "822ac8ab-1860-4624-964f-8ec18ea68ed4",
+          "title": "Advisor_Leads_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Leads_TC001_To verify ",
+              "fullTitle": "Advisor_Leads_TS001 Advisor_Leads_TC001_To verify ",
+              "timedOut": null,
+              "duration": 36084,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Leads_TS002.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.visit('https://foratravel.typeform.com/to/uTw5bh2q');\n_Leads.default.Readytobook.should('be.visible');\n_Leads.default.Connectwithanadvisor.should('be.visible');\n_Leads.default.Connectwithanadvisor1.should('be.visible');\n_Leads.default.Browsingaround.should('be.visible');\n_Leads.default.Checkoutour.should('be.visible');\n//   Leads.Partner.should('be.visible').click()\n// Leads.FAQS.should('be.visible').click()\n_Leads.default.Getstarted.should('be.visible').click();\ncy.wait(2000);\n_Leads.default.Wheredoyouwanttogo.should('be.visible');\n_Leads.default.Wheredoyouwanttogotextbox.should('be.visible').type('India');\n_Leads.default.OKbutton.eq(0).click();\n_Leads.default.Whenwouldyouliketotravel.should('be.visible');\n_Leads.default.Whenwouldyouliketotraveltext.should('be.visible');\n_Leads.default.Whenwouldyouliketotraveltextbox.should('be.visible').type('December');\n_Leads.default.OKbutton.eq(1).click();\ncy.wait(3000);\n_Leads.default.Howmanydaysyouwanttotravel.should('be.visible');\n_Leads.default.Howmanydaysyouwanttotravel1.should('be.visible');\n_Leads.default.twotothree.should('be.visible');\n_Leads.default.threetoseven.should('be.visible');\n_Leads.default.seventofourteen.should('be.visible');\n_Leads.default.fourteenplus.should('be.visible');\n_Leads.default.twotothree.should('be.visible').click();\n_Leads.default.Howmanywillbetravelling.should('be.visible');\n_Leads.default.Oneperson.should('be.visible');\n_Leads.default.Twoperson.should('be.visible');\n_Leads.default.Threetofiveperson.should('be.visible');\n_Leads.default.Fiveplusperson.should('be.visible');\n_Leads.default.Oneperson.should('be.visible').click();\ncy.wait(3000);\n//Leads.Travellingwithchildren.should('be.visible')\n_Leads.default.yes.click();\n_Leads.default.Whatsyourbudget.should('be.visible');\n_Leads.default.twofiftytofivehundread.should('be.visible');\n_Leads.default.Fivehundreadtosevenfifty.should('be.visible');\n_Leads.default.Sevenfiftyplus.should('be.visible').click();\n_Leads.default.totaltripbudget.should('be.visible');\n_Leads.default.totaltripbudgettextbox.type(\"8888\");\n_Leads.default.totaltripbudgetokbutton.click();\n_Leads.default.Whatlevelofservice.should('be.visible');\n_Leads.default.Hotelbookingonly.should('be.visible');\n_Leads.default.Cruisebookingonly.should('be.visible');\n_Leads.default.BookingplusCustomItinerary.should('be.visible').click();\n_Leads.default.Firstname.should('be.visible');\n_Leads.default.Lastname.should('be.visible');\n_Leads.default.Firstnamefield.type('Test');\n_Leads.default.Lastnamefield.type('QA');\n_Leads.default.Phonenumber.should('be.visible');\n_Leads.default.Phoneneumberfield.type('512 566 4855');\n_Leads.default.Emailform.should('be.visible');\n_Leads.default.Emailfield.type('reenaz.qa123@forastaging.net');\n_Leads.default.ContactOkbutton.click();\ncy.wait(2000);\n_Leads.default.Preferredmethodofcommunication.should('be.visible');\n_Leads.default.ContactEmail.should('be.visible');\n_Leads.default.Text.should('be.visible');\n_Leads.default.Phonecall.should('be.visible');\n_Leads.default.ContactEmail.should('be.visible').click();\n_Leads.default.Anyotherdetails.should('be.visible');\n_Leads.default.Anyotherdetails1.should('be.visible');\n_Leads.default.Anyotherdetailstextfeild.type('No other details');\n_Leads.default.Anyotherdetailsokay.click();\ncy.wait(2000);\n_Leads.default.Lastquestion.should('be.visible');\n_Leads.default.google.should('be.visible');\n_Leads.default.article.should('be.visible');\n_Leads.default.Instagram.should('be.visible');\n_Leads.default.Tiktok.should('be.visible');\n_Leads.default.Othersocialmedia.should('be.visible');\n_Leads.default.Wordofmouth.scrollIntoView().should('be.visible');\n_Leads.default.Foraadvisor.scrollIntoView().should('be.visible');\n_Leads.default.other.scrollIntoView().should('be.visible');\n_Leads.default.Instagram.should('be.visible').click();\n_Leads.default.Submit.scrollIntoView().click();\ncy.wait(1000);\n_Leads.default.Thankyou.should('be.visible');\n_Leads.default.Youwillreceiveareply.should('be.visible');",
+              "err": {},
+              "uuid": "eb3cb86a-fd39-4029-be3f-fcac5c8f524d",
+              "parentUUID": "822ac8ab-1860-4624-964f-8ec18ea68ed4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eb3cb86a-fd39-4029-be3f-fcac5c8f524d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36084,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-19T03:52:06.915Z",
+    "end": "2024-09-19T03:52:30.858Z",
+    "duration": 23943,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e796cf35-110b-4761-a563-6eeff63868d6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_GS_TS002.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_GS_TS002.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6b28f842-f6c5-47e4-b5b4-1b4da73831f4",
+          "title": "Advisor_Getting started_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Getting started_TC007_To verify the complete certified training ",
+              "fullTitle": "Advisor_Getting started_TS001 Advisor_Getting started_TC007_To verify the complete certified training ",
+              "timedOut": null,
+              "duration": 20593,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_GS_TS002.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor_GS_TS002.cy.js\\\\Advisor_Getting started_TS001 -- Advisor_Getting started_TC007_To verify the complete certified training (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n// In a separate Cypress test\ncy.getRecoveryEmail().then(email => {\n  // Use the email to perform actions, e.g., launch a link and log in\n  cy.visit('https://advisor.forastaging.net/login');\n  cy.contains(\"Not an advisor?\").should('be.visible');\n  cy.xpath(\"//a[normalize-space()='Sign in here.']\").click();\n  cy.xpath(\"//label[normalize-space()='Username']\").should('be.visible');\n  cy.xpath(\"//input[@id='username']\").type(email);\n  cy.xpath(\"//input[@id='password']\").type(\"Qaoncloud@01\");\n  cy.get('.show_hide_password > .relative > .absolute').click().click();\n  cy.xpath(\"//button[normalize-space()='Sign in']\", {\n    timeout: 10000\n  }).click();\n  cy.viewport(1500, 785);\n  cy.wait(5000);\n  _Gettingstarted.default.Gettingstartedtab.should('be.visible').click();\n  _Gettingstarted.default.Completecertifiedtraining.should('be.visible');\n  _Gettingstarted.default.Completecertifiedtrainingsubheader.should('be.visible');\n  /// Gesttingstarted.Gettingstartedtaskicon.eq(1).should('be.visible');\n  cy.xpath(\"//span[normalize-space()='Complete certified training']\").scrollIntoView().should('be.visible').click();\n  _Gettingstarted.default.Completecertifiedtrainingsubheader.should('be.visible');\n  _Gettingstarted.default.Watchtrainingsession.should('be.visible');\n  _Gettingstarted.default.Watchtrainingsessionradiobutton.should('be.visible');\n  _Gettingstarted.default.Passcertifiedquiz.should('be.visible');\n  _Gettingstarted.default.Passcertifiedquizradioibutton.should('be.visible');\n  _Gettingstarted.default.Subscribetotrainingcalendar.should('be.visible');\n  _Gettingstarted.default.Subscribetotrainingcalendarradiobutton.should('be.visible');\n  _Gettingstarted.default.Passcertifiedquiz.should('be.visible');\n  _Gettingstarted.default.Passcertifiedquizradioibutton.should('be.visible').click();\n  _Gettingstarted.default.Passcertifiedquizcontent.should('be.visible');\n  _Gettingstarted.default.Takequiz.click();\n  cy.wait(5000);\n  ///Gesttingstarted.Markeascomplete.scrollIntoView().click();\n  _Gettingstarted.default.Backtotraining.scrollIntoView().click();\n  cy.wait(5000);\n  _Gettingstarted.default.Trainingdropdown.eq(7).click();\n  _Gettingstarted.default.Gettingstartedtab.should('be.visible').click();\n  cy.wait(5000);\n  _Gettingstarted.default.Completecertifiedtraining.scrollIntoView().should('be.visible');\n  _Gettingstarted.default.Completecertifiedtrainingsubheader.scrollIntoView().should('be.visible');\n  //  Gesttingstarted.Gettingstartedtaskicon.eq(1).should('be.visible');\n  cy.xpath(\"//span[normalize-space()='Complete certified training']\").scrollIntoView().should('be.visible').click();\n  cy.get('[data-testid=\"bar-progress\"]').invoke('css', 'width').then(width => {\n    const newWidth = parseInt(width);\n    expect(newWidth).to.be.greaterThan(0);\n  });\n  _Gettingstarted.default.Watchtrainingsessionradiobutton.should('be.visible').click();\n  _Gettingstarted.default.Watchcertifiedtrainigsubheader.should('be.visible');\n  _Gettingstarted.default.Timespent.should('be.visible');\n  _Gettingstarted.default.Gototraining.click();\n  cy.wait(5000);\n  _Gettingstarted.default.Trainingdropdown.eq(2).click();\n  _Gettingstarted.default.Lessondropdown.eq(0).click();\n  const completeLessons = () => {\n    cy.wait(2000);\n    _Gettingstarted.default.Markeascomplete.scrollIntoView().click();\n    cy.get('body').then($body => {\n      const hasNextButton = $body.find('a:contains(\"Next\")').length > 0;\n      if (hasNextButton) {\n        cy.get('a').contains('Next').scrollIntoView().click();\n        cy.wait(1000);\n        completeLessons();\n      } else {\n        cy.wait(5000);\n        cy.get('a').contains('Back to Training').click();\n        cy.wait(5000);\n      }\n    });\n  };\n  completeLessons();\n  _Gettingstarted.default.Trainingdropdown.eq(2).click();\n  _Gettingstarted.default.Trainingdropdown.eq(3).click();\n  _Gettingstarted.default.Lessondropdown.eq(0).click();\n  completeLessons();\n  _Gettingstarted.default.Trainingdropdown.eq(3).click();\n  _Gettingstarted.default.Trainingdropdown.eq(4).click();\n  _Gettingstarted.default.Lessondropdown.eq(0).click();\n  completeLessons();\n  _Gettingstarted.default.Trainingdropdown.eq(4).click();\n  _Gettingstarted.default.Trainingdropdown.eq(5).click();\n  _Gettingstarted.default.Lessondropdown.eq(0).click();\n  completeLessons();\n  _Gettingstarted.default.Trainingdropdown.eq(5).click();\n  _Gettingstarted.default.Trainingdropdown.eq(6).scrollIntoView().click();\n  _Gettingstarted.default.Lessondropdown.eq(0).click();\n  completeLessons();\n  _Gettingstarted.default.Trainingdropdown.eq(6).click();\n  cy.wait(2000);\n  _Gettingstarted.default.Gettingstartedtab.should('be.visible').click();\n  cy.wait(2000);\n  _Gettingstarted.default.Completecertifiedtraining.should('be.visible');\n  _Gettingstarted.default.Completecertifiedtrainingsubheader.should('be.visible');\n  _Gettingstarted.default.Gettingstartedtaskicon.eq(1).should('be.visible');\n  cy.xpath(\"//span[normalize-space()='Complete certified training']\").scrollIntoView().should('be.visible').click();\n  cy.wait(2000);\n  cy.get('[data-testid=\"bar-progress\"]').invoke('css', 'width').then(width => {\n    const newWidth = parseInt(width);\n    expect(newWidth).to.be.greaterThan(0);\n  });\n  _Gettingstarted.default.Subscribetotrainingcalendar.should('be.visible');\n  _Gettingstarted.default.Subscribetotrainingcalendarradiobutton.should('be.visible').click();\n  _Gettingstarted.default.Subscribertotraining.should('be.visible');\n  _Gettingstarted.default.Subscribertotrainingtext.should('be.visible');\n  _Gettingstarted.default.Subscribe.click();\n  _Gettingstarted.default.Markasdone.click();\n  cy.get('[data-testid=\"bar-progress\"]').invoke('css', 'width').then(width => {\n    const newWidth = parseInt(width);\n    expect(newWidth).to.be.greaterThan(0);\n  });\n  _Gettingstarted.default.Backbutton.click();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[contains(text(),'Fun fact: certified advisors book 3.5x more travel')]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[contains(text(),'Fun fact: certified advisors book 3.5x more travel')]`, but never found it.\n    at  (webpack://advisor/./cypress/e2e/Advisor/Advisor_GS_TS002.cy.js:38:55)\n    at getRet (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:119259:20)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.try (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4315:29)\n    at thenFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:119270:60)\n    at then (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:119521:21)\n    at wrapped (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:138450:19)\n    at __webpack_modules__</runCommand (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:144371:15)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseCtx (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "1cc6f9c1-ba5b-47cd-8479-34357a162bbb",
+              "parentUUID": "6b28f842-f6c5-47e4-b5b4-1b4da73831f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1cc6f9c1-ba5b-47cd-8479-34357a162bbb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20593,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

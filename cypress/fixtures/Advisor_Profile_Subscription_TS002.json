@@ -1,0 +1,12 @@
+{
+    "Incorrectcardnumber1":"1234 5657 8999 9999",
+    "Incorrectcardnumber2":"asdcsfcsdc",
+    "Incorrectcardnumber3":"42424242",
+    "Correctcardnumber":"4242424242424242",
+    "Incorrectexpirynumber1":"asdc",
+    "Incorrectexpirynumber2":"12/21",
+    "Correctexpirynumber":"12/25",
+    "Incorrectcvc1":"asdc",
+    "Incorrectcvc2":"11",
+    "Correctcvc":"123"
+}

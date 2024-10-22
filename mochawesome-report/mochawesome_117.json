@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T07:23:54.661Z",
+    "end": "2024-09-23T07:24:50.670Z",
+    "duration": 56009,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4051724a-bdf5-48ca-81dc-22d433dc03b2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Bookings_Report an issue.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Bookings_Report an issue.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fbc1decc-f230-483e-9d26-5e4398c05d2d",
+          "title": "Advisor_Booking_Report an isuue_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Booking_To verify the Report an issue in bookings page- Validating all the dropdowns in report an issue ",
+              "fullTitle": "Advisor_Booking_Report an isuue_TS001 Advisor_Booking_To verify the Report an issue in bookings page- Validating all the dropdowns in report an issue ",
+              "timedOut": null,
+              "duration": 47656,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Bookings_Report an issue.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.NotanadvisorLogin();\n_Home.default.navbar.click();\n_Booking.default.booking.click();\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').click();\n_Partner.default.dropdownvalue1.should('be.visible');\n_Partner.default.dropdownvalue2.should('be.visible');\n_Partner.default.dropdownvalue3.should('be.visible');\n_Partner.default.dropdownvalue4.should('be.visible');\n_Partner.default.dropdownvalue5.should('be.visible');\n_Partner.default.dropdownvalue6.should('be.visible');\n_Partner.default.dropdownvalue7.should('be.visible');\n_Partner.default.Testpaymentdropdown.should('be.visible');\n_Partner.default.dropdownvalue1.click();\n_Partner.default.Describetheissue.should('be.visible');\n_Partner.default.Describetheissuefield.should('be.visible');\n_Partner.default.Cancel.should('be.visible');\n_Partner.default.Report.should('be.visible').click();\n//Partner.Error1.should('be.visible')\n_Partner.default.Error2.should('be.visible');\n_Partner.default.Issueseverityheader.should('be.visible');\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue1.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"error\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.dropdownvalue1.should('be.visible');\n_Partner.default.dropdownvalue2.should('be.visible');\n_Partner.default.dropdownvalue3.should('be.visible');\n_Partner.default.dropdownvalue4.should('be.visible');\n_Partner.default.dropdownvalue5.should('be.visible');\n_Partner.default.dropdownvalue6.should('be.visible');\n_Partner.default.dropdownvalue2.click();\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue2.click();\n_Partner.default.Issuetypeheader.should('be.visible');\n_Partner.default.Issuetypedropdown.click();\ncy.wait(2000);\n_Partner.default.Issuetypedropdown1.should('be.visible');\n_Partner.default.Issuetypedropdown2.should('be.visible');\n_Partner.default.Issuetypedropdown3.should('be.visible');\n_Partner.default.Issuetypedropdown4.should('be.visible');\n_Partner.default.Issuetypedropdown5.should('be.visible');\n_Partner.default.Issuetypedropdown2.click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"error\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n///////////////////////////Marketing\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.dropdownvalue3.click();\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible').click();\n_Partner.default.Issuetypedropdown.click();\n_Partner.default.Marketingissuetypedropdown1.should('be.visible');\n_Partner.default.Marketingissuetypedropdown2.should('be.visible');\n_Partner.default.Marketingissuetypedropdown3.should('be.visible');\n_Partner.default.Marketingissuetypedropdown4.should('be.visible');\n_Partner.default.Marketingissuetypedropdown5.should('be.visible');\n_Partner.default.Marketingissuetypedropdown6.should('be.visible');\n_Partner.default.Marketingissuetypedropdown7.should('be.visible');\n_Partner.default.Marketingissuetypedropdown3.click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\");\n_Partner.default.Report.click();\ncy.wait(2000);\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n//////////////////Partners\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.dropdownvalue4.click();\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible').click();\n_Partner.default.Issuetypedropdown.click();\n_Partner.default.Partnerissuetypedropdown1.should('be.visible');\n_Partner.default.Partnerissuetypedropdown2.should('be.visible');\n_Partner.default.Partnerissuetypedropdown3.should('be.visible');\n_Partner.default.Partnerissuetypedropdown4.should('be.visible');\n_Partner.default.Partnerissuetypedropdown5.should('be.visible');\n_Partner.default.Partnerissuetypedropdown6.should('be.visible');\n_Partner.default.Partnerissuetypedropdown5.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n///////////////////////General feedback\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.dropdownvalue7.click();\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n/////////////////////// Training\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.dropdownvalue6.click();\ncy.wait(2000);\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible').click();\n_Partner.default.Issuetypedropdown.click();\n_Partner.default.Trainerissuetypedropdown1.should('be.visible');\n_Partner.default.Trainerissuetypedropdown2.should('be.visible');\n_Partner.default.Trainerissuetypedropdown3.should('be.visible');\n_Partner.default.Trainerissuetypedropdown4.should('be.visible');\n_Partner.default.Trainerissuetypedropdown5.should('be.visible');\n_Partner.default.Trainerissuetypedropdown6.should('be.visible');\n_Partner.default.Trainerissuetypedropdown7.should('be.visible');\n_Partner.default.Trainerissuetypedropdown8.should('be.visible');\n_Partner.default.Trainerissuetypedropdown3.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n/////////////////////// Payement\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.dropdownvalue5.click();\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible').click();\n_Partner.default.Issuetypedropdown.click();\n_Partner.default.paymentdropdown1.should('be.visible');\n_Partner.default.paymentdropdown2.should('be.visible');\n_Partner.default.paymentdropdown3.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n/////////////////////// Test Payement\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Partner.default.Issuetopicdropdown.should('be.visible').eq(0).click();\n_Partner.default.Testpaymentdropdown.click();\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible').click();\n_Partner.default.Issuetypedropdown.click();\n_Partner.default.Testpaymentdropdown1.should('be.visible');\n_Partner.default.Testpaymentdropdown2.should('be.visible');\n_Partner.default.Testpaymentdropdown3.should('be.visible');\n_Partner.default.Testpaymentdropdown1.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();",
+              "err": {},
+              "uuid": "22be15c3-31a8-4e97-a540-987df700a953",
+              "parentUUID": "fbc1decc-f230-483e-9d26-5e4398c05d2d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_CopyIATA_TC001 _To verify the IATA copy buton",
+              "fullTitle": "Advisor_Booking_Report an isuue_TS001 Advisor_CopyIATA_TC001 _To verify the IATA copy buton",
+              "timedOut": null,
+              "duration": 4417,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Bookings_Report an issue.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Home.default.navbar.click();\ncy.wait(4000);\n_Home.default.CopyIATAbutton.click();\n//cy.get('[id=\"custom-tooltip-1\"]').invoke('show').should('have.text', 'copied!');",
+              "err": {},
+              "uuid": "bcf75d27-11be-48b5-9df4-05a21140c231",
+              "parentUUID": "fbc1decc-f230-483e-9d26-5e4398c05d2d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "22be15c3-31a8-4e97-a540-987df700a953",
+            "bcf75d27-11be-48b5-9df4-05a21140c231"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52073,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-19T04:14:58.036Z",
+    "end": "2024-09-19T04:16:00.641Z",
+    "duration": 62605,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1db1120d-a301-4cb6-a062-255361ffbd9f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Suppliermodal.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Suppliermodal.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7e7539ce-4d23-4af6-9c8e-bef1c7c690c6",
+          "title": "Advisor_Suppliermodal_TS001 ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Suppliermodal_To verify Supplierlogin_Avalonwaterway",
+              "fullTitle": "Advisor_Suppliermodal_TS001  Advisor_Suppliermodal_To verify Supplierlogin_Avalonwaterway",
+              "timedOut": null,
+              "duration": 45164,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Suppliermodal.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//cy.Login1()\ncy.NotanadvisorLogin();\ncy.viewport(1500, 785);\ncy.wait(3000);\ncy.visit('https://advisor.forastaging.net/?modal=request-supplier-login');\ncy.wait(5000);\n_Supplierlogin.default.Cancel.click();\ncy.visit('https://advisor.forastaging.net/?modal=request-supplier-login');\n_Supplierlogin.default.Requestloginheader.should('be.visible');\n_Supplierlogin.default.Whatsupplierheader1.should('be.visible');\n_Supplierlogin.default.Whatsupplierheader2.should('be.visible');\n_Supplierlogin.default.Next.click();\n_Supplierlogin.default.Error.should('be.visible');\ncy.wait(2000);\n_Supplierlogin.default.whichsupplierdropdown.click();\n_Supplierlogin.default.Avalonwaterway.should('be.visible');\n_Supplierlogin.default.whichsupplierdropdown.click();\ncy.wait(2000);\n_Supplierlogin.default.Stageofbookingheader1.should('be.visible');\n_Supplierlogin.default.Stageofbookingheader2.should('be.visible');\n_Supplierlogin.default.Boookingprocessdropdown.click();\ncy.wait(2000);\n_Supplierlogin.default.Option1.scrollIntoView().should('be.visible');\n_Supplierlogin.default.Option2.scrollIntoView().should('be.visible');\n_Supplierlogin.default.Option3.scrollIntoView().should('be.visible');\n//Supplierlogin.Option4.scrollIntoView().should('be.visible')\n_Supplierlogin.default.Option2.click();\n_Supplierlogin.default.Next.click();\n_Supplierlogin.default.Error.should('be.visible');\n_Supplierlogin.default.whichsupplierdropdown.click();\ncy.wait(2000);\n_Supplierlogin.default.Avalonwaterway.should('be.visible').click();\n_Supplierlogin.default.Next.click();\n_Supplierlogin.default.Avalontext.should('be.visible');\n_Supplierlogin.default.text1.should('be.visible');\n_Supplierlogin.default.text2.should('be.visible');\n_Supplierlogin.default.text3.should('be.visible');\n_Supplierlogin.default.cancelicon.should('be.visible');\n_Supplierlogin.default.Cancelbutton.should('be.visible');\n_Supplierlogin.default.Gotosupplierpage.should('be.visible');\n_Supplierlogin.default.cancelicon.should('be.visible').click();\ncy.visit('https://advisor.forastaging.net/?modal=request-supplier-login');\n_Supplierlogin.default.whichsupplierdropdown.click();\n_Supplierlogin.default.Avalonwaterway.should('be.visible').click();\n_Supplierlogin.default.Boookingprocessdropdown.click();\n_Supplierlogin.default.Option1.click();\n_Supplierlogin.default.Next.click();\n_Supplierlogin.default.Gotosupplierpage.click();\ncy.wait(3000);\ncy.visit('https://advisor.forastaging.net/?modal=request-supplier-login');\n_Supplierlogin.default.whichsupplierdropdown.click();\n_Supplierlogin.default.Avalonwaterway.should('be.visible').click();\n_Supplierlogin.default.Boookingprocessdropdown.click();\n_Supplierlogin.default.Option1.click();\n_Supplierlogin.default.Next.click();\n_Supplierlogin.default.Cancelbutton.click();",
+              "err": {},
+              "uuid": "b32ca147-cb1f-439f-867b-6abd9833ca37",
+              "parentUUID": "7e7539ce-4d23-4af6-9c8e-bef1c7c690c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Suppliermodal_To verify Supplierlogin_Deltavacation",
+              "fullTitle": "Advisor_Suppliermodal_TS001  Advisor_Suppliermodal_To verify Supplierlogin_Deltavacation",
+              "timedOut": null,
+              "duration": 10172,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Suppliermodal.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\ncy.wait(2000);\ncy.visit('https://advisor.forastaging.net/?modal=request-supplier-login');\n_Supplierlogin.default.whichsupplierdropdown.click();\n_Supplierlogin.default.Deltavacation.scrollIntoView().should('be.visible').click();\n_Supplierlogin.default.Boookingprocessdropdown.click();\n_Supplierlogin.default.Option4.click();\n_Supplierlogin.default.Next.click();\n_Supplierlogin.default.Deltavacationsupplier.should('be.visible');\n_Supplierlogin.default.Supplierlogintext.should('be.visible');\n_Supplierlogin.default.Supplierlogintext1.should('be.visible');\n_Supplierlogin.default.Submitbutton.should('be.visible').click();\ncy.wait(5000);\n_Supplierlogin.default.Rightmark.should('be.visible');\n_Supplierlogin.default.Thankyoumsg.should('be.visible');\n_Supplierlogin.default.Thankyoumsg1.should('be.visible');\n_Supplierlogin.default.close.should('be.visible').click();",
+              "err": {},
+              "uuid": "1de3cef2-8a5f-400b-a42a-c4b4b6856f78",
+              "parentUUID": "7e7539ce-4d23-4af6-9c8e-bef1c7c690c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b32ca147-cb1f-439f-867b-6abd9833ca37",
+            "1de3cef2-8a5f-400b-a42a-c4b4b6856f78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55336,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

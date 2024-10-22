@@ -1,0 +1,142 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T04:45:45.893Z",
+    "end": "2024-09-23T04:46:46.846Z",
+    "duration": 60953,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e406d2e-64b5-493f-9f0a-22929c51c2e9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Client_TS002.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Client_TS002.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec4ff850-5ced-4ce0-bd54-c917835f7f2d",
+          "title": "Advisor_Client_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_client_TC004_To verify the Loyalty Program",
+              "fullTitle": "Advisor_Client_TS001 Advisor_client_TC004_To verify the Loyalty Program",
+              "timedOut": null,
+              "duration": 24755,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Client_TS002.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.NotanadvisorclientLogin();\n_Home.default.navbar.click();\n_Client.default.Client.click();\n_Client.default.clientheader.should('be.visible');\n_Client.default.searchbar.should('be.visible');\n_Client.default.Addclient.should('be.visible').click();\n_Client.default.Cancelbutton.click();\nconst generateShortUniqueName = (length = 10) => {\n  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';\n  let result = '';\n  for (let i = 0; i < length; i++) {\n    result += characters.charAt(Math.floor(Math.random() * characters.length));\n  }\n  return result;\n};\n//cy.get('[class=\"flex md:justify-between w-full md:items-center flex-col md:flex-row p-6\"]').eq(1).click()\n_Client.default.Addclient.should('be.visible').click();\ncy.url().should('include', 'https://advisor.forastaging.net/clients?modal=add-client');\n_Client.default.AddFirstnameheader.should('be.visible');\nconst Firstname = generateShortUniqueName();\n_Client.default.Addfirstnamefield.should('be.visible').click().type(Firstname);\n_Client.default.AddLastnameheader.should('be.visible');\nconst Lastname = generateShortUniqueName();\n_Client.default.AddLastnamefield.should('be.visible').type(Lastname);\n_Client.default.Addbutton.should('be.visible').click();\ncy.wait(3000);\ncy.fixture('Advisor_Client_TS001.json').then(function (dataJson) {\n  _Client.default.Loyaltyprograms.should('be.visible').click();\n  _Client.default.Loyaltyprogramsheader.should('be.visible');\n  _Client.default.Loyaltyprogramssubheader.should('be.visible');\n  _Client.default.Addloyalityprogram.click();\n  _Client.default.Loyalityprogrlabel.should('be.visible');\n  _Client.default.Loyalityprogrameditingdropdown.should('be.visible').click();\n  _Client.default.Loyalityprogrameditingdropdown1.should('be.visible').click();\n  cy.get('[role=\"listbox\"]').should('be.visible');\n  _Client.default.AirAsia.click();\n  _Client.default.Save.click();\n  _Client.default.Errorloyalty.should('be.visible');\n  _Client.default.Enternumber.type('abndg123');\n  _Client.default.Save.click();\n  _Client.default.Loyalityprogramupdateddata.should('be.visible');\n  _Client.default.Loyalityprogramedit.click();\n  _Client.default.Loyalityprogramaddanotherprogram.click();\n  _Client.default.Option1.should('be.visible').click();\n  cy.get('[role=\"listbox\"]').should('be.visible');\n  _Client.default.Jetairways.click();\n  _Client.default.Enternumber.eq(1).type(dataJson.Loyalityprogram);\n  _Client.default.Save.click();\n  cy.get('div.flex.flex-col.gap-y-4').children(':visible').should('have.length', 2);\n  _Client.default.Loyalityprogramedit.click();\n  _Client.default.LoyalityDeletebutton.eq(0).click();\n  _Client.default.Save.click();\n  cy.get('div.flex.flex-col.gap-y-4').children(':visible').should('have.length', 1);\n  _Client.default.Loyalityprogramedit.click();\n  _Client.default.CancelButton.click();\n});",
+              "err": {},
+              "uuid": "e587e934-235a-4192-a28e-c8f21f4ce1a4",
+              "parentUUID": "ec4ff850-5ced-4ce0-bd54-c917835f7f2d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_client_TC005_To verify the Notes Section",
+              "fullTitle": "Advisor_Client_TS001 Advisor_client_TC005_To verify the Notes Section",
+              "timedOut": null,
+              "duration": 27496,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Client_TS002.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.fixture('Advisor_Client_TS001.json').then(function (dataJson) {\n  _Client.default.Notes.should('be.visible').click();\n  _Client.default.Noteicon.should('be.visible');\n  _Client.default.Notetext.should('be.visible');\n  _Client.default.Notetext1.scrollIntoView().should('be.visible');\n  cy.wait(2000);\n  _Client.default.AddNotebutton.click();\n  _Client.default.NoteTextbox.type(dataJson.Note);\n  _Client.default.NoteTextbox.type('{selectall}');\n  cy.get('div.ql-toolbar button').each($button => {\n    cy.wrap($button).click();\n  });\n  _Client.default.NoteTextbox.type(\"Testlink\");\n  _Client.default.NoteTextbox.type('{selectall}');\n  _Client.default.NoteLink.click();\n  _Client.default.Linktextbox.clear().type(dataJson.Link);\n  _Client.default.Linksave.click();\n  cy.get('input[type=\"file\"]').attachFile('Profilepict.jpg');\n  _Client.default.Save.click();\n  cy.wait(20000);\n  cy.get('[data-testid=\"edit-button\"]').click();\n  _Client.default.CancelButton.click();\n});",
+              "err": {},
+              "uuid": "eca9517f-73e4-4231-a0ed-e44fd0c83c94",
+              "parentUUID": "ec4ff850-5ced-4ce0-bd54-c917835f7f2d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_client_TC006_To verify the Action button ",
+              "fullTitle": "Advisor_Client_TS001 Advisor_client_TC006_To verify the Action button ",
+              "timedOut": null,
+              "duration": 5081,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Client_TS002.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.fixture('Advisor_Client_TS001.json').then(function (dataJson) {\n  _Client.default.Actionbutton.scrollIntoView().click();\n  _Client.default.Deleteclient.should('be.visible');\n  _Client.default.Deleteclient.should('be.visible').click();\n  _Client.default.Deleteclientheader.should('be.visible');\n  _Client.default.Deleteclientsubheader.should('be.visible');\n  _Client.default.Yesdeleteclient.should('be.visible');\n  _Client.default.Nokeepclient.should('be.visible').click();\n  _Client.default.Actionbutton.click();\n  _Client.default.Deleteclient.should('be.visible').click();\n  _Client.default.Yesdeleteclient.should('be.visible').click();\n  _Client.default.searchbar.should('be.visible').type(dataJson.Search);\n  _Client.default.Noclientfound.should('be.visible');\n  _Client.default.Noclientfound1.scrollIntoView().should('be.visible');\n  _Client.default.Noclientfound2.scrollIntoView().should('be.visible');\n  _Client.default.Noclientfound3.scrollIntoView().should('be.visible');\n  _Client.default.Searchcancelicon.click();\n  cy.wait(1000);\n  _Client.default.searchbar.should('be.visible').type(dataJson.Search1);\n  _Client.default.searchresult.should('be.visible');\n});",
+              "err": {},
+              "uuid": "5b7faa06-5718-4a34-93a4-e8152fbf018b",
+              "parentUUID": "ec4ff850-5ced-4ce0-bd54-c917835f7f2d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e587e934-235a-4192-a28e-c8f21f4ce1a4",
+            "eca9517f-73e4-4231-a0ed-e44fd0c83c94",
+            "5b7faa06-5718-4a34-93a4-e8152fbf018b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 57332,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

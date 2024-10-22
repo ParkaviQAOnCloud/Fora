@@ -1,0 +1,161 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T07:40:55.807Z",
+    "end": "2024-09-23T07:41:42.158Z",
+    "duration": 46351,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "132a23ec-29c0-4217-a57d-4d8d9ae67f92",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Leads_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Leads_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a69b4b53-9ce0-4484-abda-c26c27ff1fd8",
+          "title": "Advisor_Leads_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Leads_TC001_To verify ",
+              "fullTitle": "Advisor_Leads_TS001 Advisor_Leads_TC001_To verify ",
+              "timedOut": null,
+              "duration": 35290,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Leads_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.NotanadvisorclientLogin();\n_Home.default.navbar.click();\n_Leads.default.Leads.click();\ncy.url().should('include', 'https://advisor.forastaging.net/leads');\n_Leads.default.Leadsheader.should('be.visible');\n/* cy.get('[type=\"checkbox\"]').eq(0).click()\n cy.get('[type=\"checkbox\"]').eq(1).click()\n cy.get('[type=\"checkbox\"]').eq(2).click()\n cy.get('[type=\"checkbox\"]').eq(3).click()\n cy.get('[type=\"checkbox\"]').eq(4).click()\n cy.get('[type=\"checkbox\"]').eq(5).click()\n cy.get('[type=\"checkbox\"]').eq(6).click()*/\nconst specificLinkSelector = 'a[href=\"https://advisor.fora.travel/leads-program-guidelines\"]';\n_Leads.default.Leadstext.should('be.visible');\n//   Leads.LeadsProgramguidelines.should('be.visible').click()\ncy.get(specificLinkSelector).should('have.attr', 'href').then(href => {\n  cy.request({\n    url: href,\n    failOnStatusCode: false\n  }).then(response => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${href}`);\n    }\n  });\n});\n_Leads.default.Leadsreceived.should('be.visible');\n_Leads.default.Leadsbooked.should('be.visible');\n_Leads.default.Closerate.should('be.visible');\n_Leads.default.Open.should('be.visible');\n_Leads.default.Inprogress.should('be.visible');\n_Leads.default.Booked.should('be.visible');\n_Leads.default.Didnotbook.should('be.visible');\n_Leads.default.Searchbar.should('be.visible');\ncy.fixture('Advisor_Leads.json').then(function (dataJson) {\n  _Leads.default.Searchbar.type(dataJson.Search);\n  _Leads.default.Phoneicon.scrollIntoView().should('be.visible');\n  _Leads.default.Noresults.should('be.visible');\n  _Leads.default.Noresults.should('be.visible');\n  _Leads.default.Clearfilter.should('be.visible').click();\n  _Leads.default.Searchbar.type(dataJson.Search1);\n  _Leads.default.Italy.should('be.visible');\n  _Leads.default.Searchbar.clear();\n  /*cy.get('button').contains('Request Lead').then(($button) => {\n      if ($button.length > 0) {\n        cy.wrap($button).click();\n        Leads.Leadrequest.should('be.visible')\n        Leads.Cancelicon.should('be.visible')\n        Leads.Leadrequesttext.should('be.visible')\n        Leads.logo.should('be.visible')\n        Leads.Leadrequesttext1.should('be.visible')\n        Leads.Submitrequest.should('be.visible').click()\n  Leads.Error.click()\n  Leads.Commentbox.click().type(dataJson.Comment)\n  Leads.Submitrequest.should('be.visible').click()\n  \n      } else {\n        \n        cy.get('button').contains('Requested').should('be.visible');\n        \n      }\n    });*/\n  _Leads.default.Sortby.click();\n  _Leads.default.Oldest.click();\n  _Leads.default.Sortby.click();\n  _Leads.default.Newest.click();\n  _Leads.default.Sortby.click();\n  _Leads.default.Highesttotalbudget.scrollIntoView().click();\n  cy.wait(1000);\n  _Leads.default.Sortby.click();\n  _Leads.default.Highestnightlyudget.scrollIntoView().click();\n  cy.wait(1000);\n  _Leads.default.Sortby.click();\n  _Leads.default.Lowesttotalbudget.scrollIntoView().click();\n  cy.wait(1000);\n  _Leads.default.Sortby.click();\n  _Leads.default.Lowestnightlyudget.scrollIntoView().click();\n  _Leads.default.Filter.click();\n  _Leads.default.Filterheader.should('be.visible');\n  _Leads.default.Nightlyroombudget.should('be.visible');\n  _Leads.default.Lengthoftripdate.should('be.visible');\n  ///Leads.Travellingwithchildren.should('be.visible')\n  _Leads.default.Type.scrollIntoView().should('be.visible');\n  _Leads.default.type1.scrollIntoView().should('be.visible');\n  _Leads.default.type2.scrollIntoView().should('be.visible');\n  _Leads.default.type3.scrollIntoView().should('be.visible');\n  _Leads.default.option.eq(0).scrollIntoView().should('be.visible');\n  _Leads.default.option.eq(1).should('be.visible');\n  _Leads.default.option.eq(2).should('be.visible');\n  _Leads.default.option.eq(3).should('be.visible');\n  _Leads.default.option.eq(4).should('be.visible');\n  _Leads.default.option.eq(5).should('be.visible');\n  _Leads.default.option.eq(6).should('be.visible');\n  _Leads.default.option.eq(7).should('be.visible');\n  _Leads.default.option.eq(8).should('be.visible');\n  _Leads.default.option.eq(9).should('be.visible');\n  _Leads.default.option.eq(10).should('be.visible');\n  _Leads.default.option.eq(11).should('be.visible');\n  _Leads.default.option.eq(12).should('be.visible');\n  _Leads.default.option.eq(1).should('be.visible').click();\n  _Leads.default.option.eq(4).should('be.visible').click();\n  _Leads.default.option.eq(7).should('be.visible').click();\n  _Leads.default.option.eq(12).should('be.visible').click();\n  _Leads.default.type3.scrollIntoView().should('be.visible').click();\n  _Leads.default.Showleads.should('be.visible').click();\n  cy.wait(2000);\n  _Leads.default.Filtercount.should('be.visible');\n  cy.wait(2000);\n  cy.get('.relative > .inline-flex').click();\n  _Leads.default.Clearall.scrollIntoView().click();\n  _Leads.default.option.eq(0).scrollIntoView().should('be.visible').click();\n  _Leads.default.option.eq(1).should('be.visible').click();\n  cy.wait(1000);\n  _Leads.default.option.eq(3).should('be.visible').click();\n  cy.wait(1000);\n  _Leads.default.option.eq(11).should('be.visible').click();\n  _Leads.default.type1.should('be.visible').click();\n  _Leads.default.Showleads.should('be.visible').click();\n  cy.get('[class=\"flex flex-col p-6 gap-y-6 bg-white\"]').eq(0).each($el => {\n    cy.wrap($el).within(() => {\n      cy.get('span.text-headerF24_32.font-semibold').should('contain.text', 'Barcelona, Lisbon, and possibly the Azores');\n      cy.get('span').should('contain.text', 'The last couple weeks of September');\n      // cy.get('span').should('contain.text', '$2,000'); \n      ////cy.get('span').should('contain.text', 'Posted'); \n      cy.get('span').should('contain.text', '7-14');\n      cy.get('span').should('contain.text', \"We're looking for a relaxed trip in parts of the city where we can walk to as much as possible\");\n      cy.get('span').should('contain.text', 'Hotel booking only');\n      cy.get('span').should('contain.text', 'No kids');\n    });\n  });\n});\ncy.get('.gap-x-2 > .relative').click();\ncy.wait(2000);\n_Leads.default.Clearall.scrollIntoView().click();\ncy.wait(2000);\n_Leads.default.Showleads.should('be.visible').click();\n_Leads.default.Filter.click();\ncy.wait(2000);\n_Leads.default.Clearall.scrollIntoView().click();\ncy.wait(2000);\n_Leads.default.Filtercancelicon.click();",
+              "err": {},
+              "uuid": "179e2582-d80f-41bf-b36d-ef30fd14cc25",
+              "parentUUID": "a69b4b53-9ce0-4484-abda-c26c27ff1fd8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Leads_TC002_To verify In progress",
+              "fullTitle": "Advisor_Leads_TS001 Advisor_Leads_TC002_To verify In progress",
+              "timedOut": null,
+              "duration": 2327,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Leads_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Leads.default.Inprogress.click();\ncy.wait(1000);\ncy.url().should('include', 'https://advisor.forastaging.net/leads/in-progress');\ncy.get('[class=\"bg-white rounded border border-lightGreyBorder flex flex-col items-center justify-center w-full h-[422px]\"]').each($el => {\n  cy.wrap($el).within(() => {\n    cy.get('[class=\"mb-1 text-lg font-bold text-gray-900 text-center\"]').should('contain.text', 'No In-Progress Leads');\n    cy.get('[class=\"flex flex-col gap-y-6 pt-3 items-center w-full max-w-[375px] p-6\"]').should('contain.text', 'You can request leads in the “Open” tab. Leads will appear here once they have been assigned to you.');\n  });\n});\n_Leads.default.Viewopenleads.click();\ncy.url().should('include', 'https://advisor.forastaging.net/leads/open');\ncy.wait(1000);",
+              "err": {},
+              "uuid": "f00e404c-8973-4fd7-9c1a-038e31e1060c",
+              "parentUUID": "a69b4b53-9ce0-4484-abda-c26c27ff1fd8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Leads_TC003_To verify Booked ",
+              "fullTitle": "Advisor_Leads_TS001 Advisor_Leads_TC003_To verify Booked ",
+              "timedOut": null,
+              "duration": 1314,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Leads_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Leads.default.Booked.click();\ncy.wait(1000);\ncy.url().should('include', 'https://advisor.forastaging.net/leads/booked');\ncy.get('[class=\"bg-white rounded border border-lightGreyBorder flex flex-col items-center justify-center w-full h-[422px]\"]').each($el => {\n  cy.wrap($el).within(() => {\n    cy.get('[class=\"mb-1 text-lg font-bold text-gray-900 text-center\"]').should('contain.text', 'Booked');\n    cy.get('[class=\"flex flex-col gap-y-6 pt-3 items-center w-full max-w-[375px] p-6\"]').should('contain.text', 'These are leads that have turned into a successful booking for your new client.');\n  });\n});\n_Leads.default.Viewopenleads.click();\ncy.url().should('include', 'https://advisor.forastaging.net/leads/open');",
+              "err": {},
+              "uuid": "731c7449-a7e1-442f-8dec-09b78228ef30",
+              "parentUUID": "a69b4b53-9ce0-4484-abda-c26c27ff1fd8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Leads_TC003_To verify Did not book ",
+              "fullTitle": "Advisor_Leads_TS001 Advisor_Leads_TC003_To verify Did not book ",
+              "timedOut": null,
+              "duration": 3302,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Leads_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.wait(2000);\n_Leads.default.Didnotbook.click();\ncy.wait(1000);\ncy.url().should('include', 'https://advisor.forastaging.net/leads/did-not-book');\ncy.get('[class=\"bg-white rounded border border-lightGreyBorder flex flex-col items-center justify-center w-full h-[422px]\"]').each($el => {\n  cy.wrap($el).within(() => {\n    cy.get('[class=\"mb-1 text-lg font-bold text-gray-900 text-center\"]').should('contain.text', 'No Open Leads');\n    cy.get('[class=\"flex flex-col gap-y-6 pt-3 items-center w-full max-w-[375px] p-6\"]').should('contain.text', 'Leads that do not result in a booking will show up here.');\n  });\n});\n_Leads.default.Viewopenleads.click();\ncy.url().should('include', 'https://advisor.forastaging.net/leads/open');",
+              "err": {},
+              "uuid": "50ac32f4-e371-4a0d-9f06-97be65cc9be0",
+              "parentUUID": "a69b4b53-9ce0-4484-abda-c26c27ff1fd8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "179e2582-d80f-41bf-b36d-ef30fd14cc25",
+            "f00e404c-8973-4fd7-9c1a-038e31e1060c",
+            "731c7449-a7e1-442f-8dec-09b78228ef30",
+            "50ac32f4-e371-4a0d-9f06-97be65cc9be0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42233,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

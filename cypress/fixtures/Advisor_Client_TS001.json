@@ -1,0 +1,51 @@
+{
+    "Firstname":"testing15",
+
+    "Middlename":"test",
+    "Lastname":"Client2",
+    "Lastname2":"Traveler",
+    "Preferedname":"noClients",
+    "Suffix":"abc",
+    "Preferedpartner":"Client",
+    "Personalemail":"reenaz@qaoncloud",
+    "Personalemail1":"!@#!@#$!@$!@#$@#",
+    "Personalemail2":"reenaz@qaoncloud.com",
+    "Personalemail3":"parkavi@qaoncloud.com",
+    "Workemail":" ",
+    "Workemail1":"!@#!@#$!@$!@#$@#",
+    "Workemail2":"reenaz.fathima@forastaging.net",
+    "Otheremail":" ",
+    "Otheremail1":"!@#!@#$!@$!@#$@#",
+    "Otheremail2":"testing.os@forastaging.net",
+    "Mobilephone":"9731064717",
+    
+    "Addressname":"Summer house",
+    "Countryfield":"kkk",
+    "Countryfield1":"United States of America",
+    "Address":"Newyork",
+    "Aptnumber":"12/A",
+    "City":"San Jose",
+    "State":"Texas",
+    "Zipcode":"54326",
+    "Note":"Testlink",
+    "Link":"www.google.com",
+    "Nameofdatefield":"New date",
+    "Legalnameeditfield":"New",
+    "Legalnameeditfield1":"Qa",
+    "Legalnameeditfield2":"Client"  ,  
+    "Legalnameeditfield3":"Test"    ,
+    "Phonenumber":"919632587410",
+    "KTN":"abcd123654",
+    "Loyalityprogram":"abndg123",
+    "Loyalityprogram1":"gdfjhfgku4656546",
+
+    "Search":"gdfjhfgku4656546",
+    "Search1":"Client",
+    "searchvalidname": "testing5 Client2",
+    "searchvalidname1": "testing5 Client2",
+    "NonExitClient": "Fora@"
+
+
+
+    
+}

@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-19T03:59:20.290Z",
+    "end": "2024-09-19T04:00:27.589Z",
+    "duration": 67299,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7b55c537-df37-450c-8730-f42421cd0985",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_New_HomeOnboarding_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_New_HomeOnboarding_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df8d5395-802e-47e8-8748-1780fb58f7ca",
+          "title": "Advisor_Home Onboarding_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Home_TC001,TC002 and TC003_To Check the home page/Advisor kickoff call/ Learn the fundamentals section of home page - ",
+              "fullTitle": "Advisor_Home Onboarding_TS001 Advisor_Home_TC001,TC002 and TC003_To Check the home page/Advisor kickoff call/ Learn the fundamentals section of home page - ",
+              "timedOut": null,
+              "duration": 18132,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_New_HomeOnboarding_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//  cy.HomeLogin()\ncy.NotanadvisorHomeLogin();\ncy.viewport(1500, 785); /// Login to the portal\n// Home.navbar.click()\n_Home.default.home.click();\n/// verifying the home page\ncy.log('verifying home page');\n//Newhome.calldropdown.click()\n_Home.default.welcometext.scrollIntoView().should('be.visible');\n// Newhome.subheading.should('be.visible') \n//Newhome.Subheading1.should('be.visible') \n//Newhome.Learnthefundamentals.eq(0).scrollIntoView().should('be.visible') \n//Newhome.puzzlesymbol.eq(0).scrollIntoView().should('be.visible') \n//Newhome.Readytobook.scrollIntoView().should('be.visible') \n//Newhome.Seebelow.scrollIntoView().should('be.visible') \n//Newhome.feelinglost.scrollIntoView().should('be.visible') \n//Newhome.Essentialmaterials.scrollIntoView().should('be.visible') \n//Newhome.Welcometogettingstarted.click()\ncy.wait(3000);\n//cy.contains(\"Keynote: Welcome to Fora\").scrollIntoView().should('be.visible')\n//Home.home.click()\n//Newhome.Certifiedtraining.scrollIntoView().should('be.visible').click()\ncy.wait(2000);\n//Home.navbar.click({force:true})\n/*Home.home.click({force:true})\ncy.wait(2000)\n\nNewhome.Certifiedtraining.scrollIntoView().should('be.visible') \nNewhome.Needtoknowtext1.scrollIntoView().should('be.visible') \n\nNewhome.Followfourguided.scrollIntoView().should('be.visible') \nNewhome.Certifiedtraining.scrollIntoView().should('be.visible') \nNewhome.Certifiedtrainingtext.scrollIntoView().should('be.visible') \nNewhome.Needtoknowtext4.scrollIntoView().should('be.visible') \ncy.wait(5000)*/",
+              "err": {},
+              "uuid": "ba52bbf0-1c1a-4da6-9cb1-91bb8144f58a",
+              "parentUUID": "df8d5395-802e-47e8-8748-1780fb58f7ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Home_TC006_Home - To Check the Company information section of the home page",
+              "fullTitle": "Advisor_Home Onboarding_TS001 Advisor_Home_TC006_Home - To Check the Company information section of the home page",
+              "timedOut": null,
+              "duration": 36943,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_New_HomeOnboarding_TS001.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor_New_HomeOnboarding_TS001.cy.js\\\\Advisor_Home Onboarding_TS001 -- Advisor_Home_TC006_Home - To Check the Company information section of the home page (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\ncy.log('Company information section of the home page');\ncy.wait(3000);\n_Home.default.home.click();\n//Home.cancel.click({ force: true });\ncy.wait(2000);\n_Home.default.Bookinginfo.scrollIntoView().should('be.visible');\n_Home.default.IATA.scrollIntoView().should('be.visible');\ncy.wait(2000);\n_Home.default.copyIATA.click();\ncy.wait(1000);\n_Home.default.Mailingaddress.should('be.visible');\ncy.wait(1000);\n_Home.default.Mailingaddresscopy.click(); // clicking on the copy icon in mailing address\n_Home.default.Mailingaddresstext.should('be.visible');\n_Home.default.Mailingaddresstext1.should('be.visible');\n_Home.default.Mailingaddresstext2.should('be.visible');\n_Home.default.Phonenumber.should('be.visible');\ncy.wait(1000);\n_Home.default.Phonenumbercopy.click(); // clicking on the copy icon in phonenumber \ncy.wait(1000);\n_Home.default.Bookoutsideportalinfo.should('be.visible');\n_Home.default.Bookinsideportalinfotext.scrollIntoView().should('be.visible');\ncy.wait(2000);\n_Home.default.Bookinsideportalinfotext1.scrollIntoView().click();\n// clicking on the Partners link in the bookinsideportal section\ncy.wait(2000);\n_Home.default.home.click();\n//Home.cancel.click({ force: true });\ncy.wait(2000);\n_Home.default.Bookoutsideportalinfotext.scrollIntoView().should('be.visible');\n_Home.default.Bookoutsideportalinfotext1.scrollIntoView().should('be.visible');\n_Home.default.Bookoutsideportalinfotext2.scrollIntoView().should('be.visible');\ncy.wait(1000);\n_Home.default.Bookoutsideportalinfotext3.scrollIntoView().should('be.visible').click();\n// clicking on the Partners link in the bookoutsidetheportal section of booking information section\ncy.wait(2000);\n_Home.default.home.click();\ncy.wait(3000);\n_Home.default.More.scrollIntoView().should('be.visible');\n_Home.default.Sidekick.should('be.visible').click(); // clicking on sidekick link present in the more section of booking information section\ncy.wait(2000);\n_Home.default.home.click();\ncy.wait(3000);\n_Home.default.Helpcenter.scrollIntoView().should('be.visible').click();\ncy.wait(2000);\n// clicking on Helpcenter link present in the more section of in booking information section\n_Home.default.home.click();\ncy.wait(3000);\n_Home.default.Communityguideline.scrollIntoView().should('be.visible').click();\ncy.wait(2000);\n//    Home.navbar.click();\n_Home.default.home.click();\n//  Home.cancel.click();\n_Home.default.text.scrollIntoView().should('be.visible');\n_Home.default.text1.scrollIntoView().should('be.visible');\n_Home.default.text2.scrollIntoView().should('be.visible');\ncy.wait(1000);\n_Home.default.commissionemail1.scrollIntoView().should('be.visible').click(); // clicking on the commission mail in booking information section",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <a.p-2.flex.gap-x-2.items-center.rounded-xl.text-base.font-semibold.hover:bg-nav-hover.focus-visible:!outline.focus-visible:!outline-2.bg-nav-active.text-nav-textMain>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <a.p-2.flex.gap-x-2.items-center.rounded-xl.text-base.font-semibold.hover:bg-nav-hover.focus-visible:!outline.focus-visible:!outline-2.bg-nav-active.text-nav-textMain>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom\nat retryActionability (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:113277:74)\nat tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\nat __webpack_modules__</module.exports/Promise.try (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4315:29)\nat whenStable (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:144102:62)\nat __webpack_modules__</create/retry (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:144043:14)\nat tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\nat __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\nat __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\nat __webpack_modules__</module.exports/Promise.delay/handle< (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at shouldFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:118728:18)\n    at should (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:118842:23)\n    at __webpack_modules__</create/injectAssertion (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:143372:39)\n    at assertions (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:143620:16)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at gotValue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:6478:18)\n    at gotAccum (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:6465:25)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseCtx (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "613ce68e-af9f-43df-902f-b85767a06c66",
+              "parentUUID": "df8d5395-802e-47e8-8748-1780fb58f7ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Home_TC007_Home - To Check the Bookings section of the home page",
+              "fullTitle": "Advisor_Home Onboarding_TS001 Advisor_Home_TC007_Home - To Check the Bookings section of the home page",
+              "timedOut": null,
+              "duration": 6604,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_New_HomeOnboarding_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\n//  Home.navbar.click();\n_Home.default.home.click();\ncy.wait(5000); // Adjust as necessary\n//  Home.cancel.click({ force: true });\n_Home.default.excludingcanceled.scrollIntoView().should('be.visible');\n_Home.default.Yourbookings.eq(0).scrollIntoView().click({\n  force: true\n});\n_Home.default.alltimetext.should('be.visible');\n_Home.default.lastweek.should('be.visible');\n_Home.default.lastmonth.should('be.visible');\n_Home.default.lastyear.should('be.visible');\n_Home.default.currantweek.should('be.visible');\n_Home.default.currantmonth.should('be.visible');\n_Home.default.currantyear.should('be.visible');\ncy.log('validating the sort option present in the booking section of Home page');\n_Home.default.alltimetext.click();\n_Home.default.sortresult.invoke('text').then(alltime => {\n  cy.log('Alltime bookings:', alltime);\n});\n_Home.default.Yourbookings.click({\n  force: true\n});\n_Home.default.lastweek.click();\n_Home.default.sortresult.invoke('text').then(lastweek => {\n  cy.log('Lastweek bookings:', lastweek);\n});\n/*  Home.viewbookinglink.click();\n  cy.wait(2000); // Adjust as necessary\n  Bookings.Dates.eq(0).click({ force: true });\n  cy.wait(2000); // Adjust as necessary\n  Bookings.clear.click();\n  Bookings.Dates.eq(0).click({ force: true });\n  Bookings.Bookingstatus.eq(0).click();\n  cy.wait(2000)\n  Bookings.clear.click();\n  cy.url().should('include', 'https://advisor.forastaging.net/bookings');*/",
+              "err": {},
+              "uuid": "272a6d3b-d21f-4b40-9e5f-6913534d6988",
+              "parentUUID": "df8d5395-802e-47e8-8748-1780fb58f7ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba52bbf0-1c1a-4da6-9cb1-91bb8144f58a",
+            "272a6d3b-d21f-4b40-9e5f-6913534d6988"
+          ],
+          "failures": [
+            "613ce68e-af9f-43df-902f-b85767a06c66"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 61679,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

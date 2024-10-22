@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-19T03:32:56.450Z",
+    "end": "2024-09-19T03:33:18.477Z",
+    "duration": 22027,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f8cc6e9a-928e-46ea-83f2-b784e0ba08d7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Booking_TS003.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Booking_TS003.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ea291524-9ce8-4122-8075-0f0f26317664",
+          "title": "Advisor_Booking_TS003",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Booking_TC018_To verify if the total commissionable value is calculated correctly",
+              "fullTitle": "Advisor_Booking_TS003 Advisor_Booking_TC018_To verify if the total commissionable value is calculated correctly",
+              "timedOut": null,
+              "duration": 18540,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Booking_TS003.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor_Booking_TS003.cy.js\\\\Advisor_Booking_TS003 -- Advisor_Booking_TC018_To verify if the total commissionable value is calculated correctly (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n// cy.Login1();\ncy.NotanadvisorclientLogin();\n_Home.default.navbar.click();\n_Booking.default.booking.click();\n//  cy.scrollTo('bottom');\n_Booking.default.Totalbooking.invoke('text').then(totalBookingValue => {\n  _Booking.default.card.its('length').then(cardCount => {\n    const totalBookingValueNumber = parseFloat(totalBookingValue);\n    expect(totalBookingValueNumber).to.equal(cardCount);\n  });\n});\ncy.scrollTo('bottom', {\n  ensureScrollable: false\n});\ncy.wait(8000);\ncy.scrollTo('bottom', {\n  ensureScrollable: false\n});\n//cy.scrollTo('bottom');\ncy.wait(8000);\nlet sumOfIndividualValues = 0;\n// Fetch individual commissionable values excluding bookings with the specified class\ncy.get('[class=\"hidden md:block\"]').each(($bookingRow, index) => {\n  const hasExcludedClass = $bookingRow.find('.rounded-button.py-1.px-3.font-bold.text-small.bg-lightRedBg.text-error.w-fit').length > 0;\n  if (!hasExcludedClass) {\n    const valueText = $bookingRow.find('[data-testid=\"total_commissionable_booking_usd\"]').text().trim();\n    const value = parseFloat(valueText.replace(/[^0-9.-]+/g, ''));\n    if (!isNaN(value)) {\n      sumOfIndividualValues += value; // Update to include the value without rounding\n      cy.log(`Individual Commissionable Value ${index + 1}:`, value);\n    } else {\n      cy.log(`Skipping invalid commissionable value: ${valueText}`);\n    }\n  } else {\n    cy.log(`Skipping value with excluded class - Individual Commissionable Value ${index + 1}`);\n  }\n});\n// Get the Total Commissionable Value from the page\ncy.get('[class=\"text-header md:text-title font-bold\"]').eq(1).then($totalCommissionableValue => {\n  const totalCommissionableValueText = $totalCommissionableValue.text();\n  cy.log('Total Commissionable Value Text:', totalCommissionableValueText);\n  const totalCommissionableValue = parseFloat(totalCommissionableValueText.replace('$', '').replace(/[^0-9.-]+/g, ''));\n  cy.log('Total Commissionable Value:', totalCommissionableValue);\n  // Compare the sum of individual Commissionable Values (excluding bookings with the specified class) with the Total Commissionable Value\n  expect(Math.round(sumOfIndividualValues)).to.equal(Math.round(totalCommissionableValue));\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `[data-testid=\"commissions\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `[data-testid=\"commissions\"]`, but never found it.\n    at get Totalbooking (webpack://advisor/./cypress/support/Page Object/Advisor/Booking.js:255:18)\n    at  (webpack://advisor/./cypress/e2e/Advisor/Advisor_Booking_TS003.cy.js:21:2)\n    at __webpack_modules__</setRunnable/runnable.fn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:138717:43)\n    at callFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157333:21)\n    at __webpack_modules__</Runnable.prototype.run (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157320:13)\n    at __webpack_modules__</create/onRunnableRun (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:163244:30)\n    at finallyHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4072:23)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1589:21)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/Promise.prototype._resolveCallback (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1439:57)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1531:17)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2950:14)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._iterate (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2920:31)\n    at init (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2884:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1573:21)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2950:14)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1581:26)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/MappingPromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4987:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1581:26)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "b3b49413-da90-4198-9bfe-5f3379968c5f",
+              "parentUUID": "ea291524-9ce8-4122-8075-0f0f26317664",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b3b49413-da90-4198-9bfe-5f3379968c5f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18540,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

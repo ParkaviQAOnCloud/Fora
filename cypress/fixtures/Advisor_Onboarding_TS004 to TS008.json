@@ -1,0 +1,40 @@
+{
+    "URL":"https://advisor.forastaging.net/register/g6nks0q6a6nl",
+    "URL1":"https://advisor.forastaging.net/register/ipjmy449872w",  
+
+    "Text":"xyz",
+    "Number":"989",
+    "Capsletter":"A",
+    "Smallletter":"a",
+    "Countryname":"India",
+    "Space":" ",
+    "Address":" Street 1",
+    "Apartment":" Apartment 1",
+    "City":" Coimbatore",
+    "State":"Tamil Nadu",
+    "Incorrectzipcode1":"Tsdfsf",
+    "Incorrectzipcode2":" 3",
+    "Zipcodenumber":"78945",
+    "Incorrectnumber1":"+6",
+    "Incorrectnumber2":"78945789456123",
+    "Correctnumber":"9894578945",
+    "Correctnumber1":"+919894578945",
+    "Entityname":"Jhon",
+    "Entitytitle":"Manager",
+    "Incorrectpassword1":"Testqa",
+    "Incorrectpassword2":"Testqa12345678",
+    "Correctpassword":"Qaoncloud@01",
+    "Incorrectcardnumber1":"1234 5657 8999 9999",
+    "Incorrectcardnumber2":"asdcsfcsdc",
+    "Incorrectcardnumber3":"42424242",
+    "Correctcardnumber":"4242424242424242",
+    "Incorrectexpirynumber1":"asdc",
+    "Incorrectexpirynumber2":"12/21",
+    "Correctexpirynumber":"12/25",
+    "Incorrectcvc1":"asdc",
+    "Incorrectcvc2":"11",
+    "Correctcvc":"123"
+
+
+
+}

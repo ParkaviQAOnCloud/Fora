@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-18T09:30:57.012Z",
+    "end": "2024-09-18T09:34:01.400Z",
+    "duration": 184388,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "63704714-8e06-429a-81fd-46fc3c120397",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Admin\\Admin_Invite_TS001.cy.js",
+      "file": "cypress\\e2e\\Admin\\Admin_Invite_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "259b6cd8-8016-44a7-9e6e-3ead2f7e98db",
+          "title": "Admin_Invitation_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Admin_Invitation_TC001_To Check the invitations page",
+              "fullTitle": "Admin_Invitation_TS001 Admin_Invitation_TC001_To Check the invitations page",
+              "timedOut": null,
+              "duration": 12762,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Admin\\\\Admin_Invite_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//  cy.viewport(390,844)\ncy.NotanadvisorAdminLogin();\n_Admin.default.navbar.click();\n_Admin.default.invitation.click();\n_Invite.default.invite.should('be.visible');\n_Invite.default.searchbar.should('be.visible');\n_Invite.default.filter.should('be.visible');\n_Admin.default.newinvite.should('be.visible');\n_Invite.default.releasenote.scrollIntoView().should('be.visible');",
+              "err": {},
+              "uuid": "725c4cf8-59ba-4076-a8fd-b013f3315660",
+              "parentUUID": "259b6cd8-8016-44a7-9e6e-3ead2f7e98db",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_Invitation_TC002_To Check if the user can view all the invitations",
+              "fullTitle": "Admin_Invitation_TS001 Admin_Invitation_TC002_To Check if the user can view all the invitations",
+              "timedOut": null,
+              "duration": 63648,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Admin\\\\Admin_Invite_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Invite.default.namesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(1)\").invoke('text').then(Namesort => {\n  cy.log('Sorted Name:', Namesort);\n});\n_Invite.default.namesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(1)\").invoke('text').then(Namesort => {\n  cy.log('Sorted Name:', Namesort);\n});\n_Invite.default.statussort.click();\n_Invite.default.createddatesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(Createddatesort => {\n  cy.log('Created date Sort:', Createddatesort);\n});\n_Invite.default.createddatesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(Createddatesort => {\n  cy.log('Created date Sort:', Createddatesort);\n});\n_Invite.default.lastinvitesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(LastinviteDate => {\n  cy.log('Last invite date:', LastinviteDate);\n});\n_Invite.default.lastinvitesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(LastinviteDate => {\n  cy.log('Last invite date:', LastinviteDate);\n});\ncy.fixture('Admin_Invite_TS001').then(function (dataJson) {\n  _Admin.default.newinvite.click();\n  cy.wait(2000);\n  const getRandomNumber = () => Math.floor(Math.random() * 10000); // Generates a number between 0 and 9999\n  const baseUsername = 'reenaz';\n  const uniqueUsername = `${baseUsername}+${getRandomNumber()}@qaoncloud.com`;\n  _Admin.default.personalmail.type(uniqueUsername);\n  const baseUsername1 = 'QA';\n  const uniqueUsername1 = `${baseUsername1}_${getRandomNumber()}`;\n  _Admin.default.firstname.type(uniqueUsername1);\n  const baseUsername2 = 'Testing';\n  const uniqueUsername2 = `${baseUsername2}_${getRandomNumber()}`;\n  _Admin.default.lastname.type(uniqueUsername2);\n  const baseUsername3 = 'RQAautomation';\n  const uniqueUsername3 = `${baseUsername3}+${getRandomNumber()}`;\n  cy.wait(2000);\n  _Admin.default.foraemail.clear().type(uniqueUsername3);\n  _Admin.default.idbaseurl.should('have.value', '@forastaging.net');\n  _Admin.default.tags.should('be.visible');\n  _Admin.default.privatenote.type(dataJson.Usertag);\n  _Admin.default.selectforateam.click();\n  _Admin.default.save.click();\n  _Invite.default.alert.scrollIntoView().should('be.visible');\n  _Invite.default.pendingtaginvite.should('be.visible');\n  _Invite.default.personalmailtext.should('be.visible');\n  _Invite.default.customerio.should('be.visible');\n  _Invite.default.back.click();\n  _Invite.default.backinvitation.click();\n  _Invite.default.invitationreminder.click();\n  _Invite.default.invitationreminder.click();\n  _Invite.default.searchbar.type(dataJson.Search1 + '{enter}');\n  // Invite.result.should('contain', 'reenaz')\n  _Invite.default.searchbar.clear().type(dataJson.Search2 + '{enter}');\n  _Invite.default.result.should('contain', 'fathima');\n  _Invite.default.selectcolumn.click();\n  _Invite.default.personalmailtextbox.check();\n  _Invite.default.save.click();\n  _Invite.default.searchbar.clear().type(dataJson.Search3 + '{enter}');\n  _Invite.default.result.should('contain', 'reenaz@qaoncloud.com');\n  _Invite.default.searchbar.clear();\n  _Invite.default.searchbar.type('{enter}');\n  /* Invite.filter.click()\n  Invite.selectfromdropdown.type(dataJson.Search4+ '{enter}')\n  Invite.apply.click( {force: true})*/\n  //Invite.noreminder.should('be.visible')\n  _Invite.default.selectcolumn.click();\n  _Invite.default.notes.check();\n  _Invite.default.commissionplan.check();\n  _Invite.default.revoke.check();\n  _Invite.default.save.click();\n});",
+              "err": {},
+              "uuid": "ec2f9abd-ffda-473c-91af-4dd9f745ec68",
+              "parentUUID": "259b6cd8-8016-44a7-9e6e-3ead2f7e98db",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_Invitation_TC003_To Check if the user can view pending invitation page",
+              "fullTitle": "Admin_Invitation_TS001 Admin_Invitation_TC003_To Check if the user can view pending invitation page",
+              "timedOut": null,
+              "duration": 42341,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Admin\\\\Admin_Invite_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Invite.default.pending.click();\n_Invite.default.pendingtag.should('be.visible');\ncy.log('pending');\n_Invite.default.invitationreminder.click();\n_Invite.default.invitationreminder.click();\ncy.fixture('Admin_Invite_TS001').then(function (dataJson) {\n  _Invite.default.searchbar.type(dataJson.Search8 + '{enter}');\n  // Invite.result.should('contain', 'Rqa')\n  cy.wait(2000);\n  _Invite.default.searchbar.clear().type(dataJson.Search9 + '{enter}');\n  cy.wait(2000);\n  //  Invite.result.should('contain', 'test')\n  _Invite.default.selectcolumn.click();\n  cy.wait(2000);\n  _Invite.default.personalmailtextbox.check();\n  _Invite.default.save.click();\n  _Invite.default.searchbar.clear().type(dataJson.Search7 + '{enter}');\n  cy.wait(2000);\n  // Invite.result.should('contain', 'reenaz+717@qaoncloud.com')\n  _Invite.default.searchbar.clear();\n  _Invite.default.searchbar.type('{enter}');\n  _Invite.default.filter.click();\n  _Invite.default.selectfromdropdown.type(dataJson.Search4 + '{enter}');\n  _Invite.default.apply.click({\n    force: true\n  });\n  // Invite.noreminder.should('be.visible')\n  _Invite.default.selectcolumn.click();\n  cy.wait(2000);\n  _Invite.default.notes.check();\n  _Invite.default.commissionplan.check();\n  _Invite.default.revoke.check();\n  cy.wait(2000);\n  _Invite.default.save.click();\n});",
+              "err": {},
+              "uuid": "cdf7fe8e-a715-43ca-8bca-b7bdff554b04",
+              "parentUUID": "259b6cd8-8016-44a7-9e6e-3ead2f7e98db",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_Invitation_TC004_To Check if the user can view revoked  invitations",
+              "fullTitle": "Admin_Invitation_TS001 Admin_Invitation_TC004_To Check if the user can view revoked  invitations",
+              "timedOut": null,
+              "duration": 31218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Admin\\\\Admin_Invite_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Invite.default.invitationreminder.click();\n_Invite.default.revoked.click();\n_Invite.default.revokedtag.should('be.visible');\ncy.log('revoked');\n_Invite.default.namesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(1)\").invoke('text').then(Namesort => {\n  cy.log('Sorted Name:', Namesort);\n});\n_Invite.default.namesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(1)\").invoke('text').then(Namesort => {\n  cy.log('Sorted Name:', Namesort);\n});\n_Invite.default.statussort.click();\n_Invite.default.revokedtag.should('be.visible');\n_Invite.default.createddatesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(Createddatesort => {\n  cy.log('Created date Sort:', Createddatesort);\n});\n//Invite.result.should('contain', 'June 7, 2022, 7:37 p.m.')\n_Invite.default.createddatesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(Createddatesort => {\n  cy.log('Created date Sort:', Createddatesort);\n});\n_Invite.default.lastinvitesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(LastinviteDate => {\n  cy.log('Last invite date:', LastinviteDate);\n});\n_Invite.default.lastinvitesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(LastinviteDate => {\n  cy.log('Last invite date:', LastinviteDate);\n});",
+              "err": {},
+              "uuid": "5974ec73-4999-4186-af11-77599b6f6d0f",
+              "parentUUID": "259b6cd8-8016-44a7-9e6e-3ead2f7e98db",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_Invitation_TC005_To Check if the user can view  Accepted invitations",
+              "fullTitle": "Admin_Invitation_TS001 Admin_Invitation_TC005_To Check if the user can view  Accepted invitations",
+              "timedOut": null,
+              "duration": 30245,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Admin\\\\Admin_Invite_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Invite.default.invitationreminder.click();\n_Invite.default.accepted.click();\n_Invite.default.acceptedtag.should('be.visible');\ncy.log('accepted');\n_Invite.default.namesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(1)\").invoke('text').then(Namesort => {\n  cy.log('Sorted Name:', Namesort);\n});\n_Invite.default.namesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(1)\").invoke('text').then(Namesort => {\n  cy.log('Sorted Name:', Namesort);\n});\n_Invite.default.statussort.click();\n_Invite.default.acceptedtag.should('be.visible');\n_Invite.default.createddatesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(Createddatesort => {\n  cy.log('Created date Sort:', Createddatesort);\n});\n//Invite.result.should('contain', 'June 7, 2022, 7:37 p.m.')\n_Invite.default.createddatesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(Createddatesort => {\n  cy.log('Created date Sort:', Createddatesort);\n});\n_Invite.default.lastinvitesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(LastinviteDate => {\n  cy.log('last invite  date:', LastinviteDate);\n});\n_Invite.default.lastinvitesort.click();\ncy.get(\"tr[id='invitation_index_table_row_1'] td:nth-child(4)\").invoke('text').then(LastinviteDate => {\n  cy.log('First row created date:', LastinviteDate);\n});",
+              "err": {},
+              "uuid": "29118e27-4e9a-4238-9fd9-25b373d1e840",
+              "parentUUID": "259b6cd8-8016-44a7-9e6e-3ead2f7e98db",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "725c4cf8-59ba-4076-a8fd-b013f3315660",
+            "ec2f9abd-ffda-473c-91af-4dd9f745ec68",
+            "cdf7fe8e-a715-43ca-8bca-b7bdff554b04",
+            "5974ec73-4999-4186-af11-77599b6f6d0f",
+            "29118e27-4e9a-4238-9fd9-25b373d1e840"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 180214,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

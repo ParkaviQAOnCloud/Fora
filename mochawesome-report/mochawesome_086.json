@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-23T04:37:40.618Z",
+    "end": "2024-09-23T04:38:01.048Z",
+    "duration": 20430,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00b2b3d2-5278-48ee-b50b-bd2dee78d064",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Booking_TS008.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Booking_TS008.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99f94475-ddf7-4fb5-9014-150930343c28",
+          "title": "Advisor_Booking_TS008",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Booking_TC026_To verify if user can contact fora for other issues -- Here we are clicking on the Contact fora button to report any other issues",
+              "fullTitle": "Advisor_Booking_TS008 Advisor_Booking_TC026_To verify if user can contact fora for other issues -- Here we are clicking on the Contact fora button to report any other issues",
+              "timedOut": null,
+              "duration": 17566,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Booking_TS008.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor_Booking_TS008.cy.js\\\\Advisor_Booking_TS008 -- Advisor_Booking_TC026_To verify if user can contact fora for other issues -- Here we are clicking on the Contact fora button to report any other issues (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//cy.Login1();\ncy.NotanadvisorLogin();\nconst bookingData = {\n  \"id\": uuidv4(),\n  \"email_captured\": \"2023-12-01\",\n  \"advisor\": \"automation1721627564434@forastaging.net\",\n  \"arrival\": \"2023-12-11\",\n  \"departure\": \"2023-12-12\",\n  \"booking_category\": \"Hotel\",\n  \"primary_guest_name\": \"Fora travel\",\n  \"avg_gross_nightly_rate\": 12,\n  \"fx_rate\": 1.1234999,\n  \"rooms\": 3,\n  \"booking_status\": \"Original\",\n  \"total_commissionable_booking\": 1900.24,\n  \"est_commission\": 0.1,\n  \"resource_link\": \"https://fora.kustomerapp.com/app/customers/636ecafb3ee7ff7209b2014f/event/637afc19d3637b39d65b156d\",\n  \"booking_channel\": \"Direct\",\n  \"confirmation_num\": \"34277715\",\n  \"hotel_brand\": \"brand\",\n  \"hotel_group\": \"group\",\n  \"supplier_id\": \"1aece09a-e51d-4548-bfc3-23d6d16abce2\",\n  \"supplier\": \"Le Meridien Chicago - Oakbrook Center\",\n  \"booking_currency\": \"USD\",\n  \"hotel_contact\": \"no-reply@t1.hpe-esp.hyatt.com\",\n  \"invoice_on_departure\": \"YES\",\n  \"full_address\": \"full address\",\n  \"country\": \"country\",\n  \"state\": \"state\",\n  \"city\": \"city\",\n  \"zip_code\": \"zip_code\",\n  \"primary_guest_email\": \"primaryguest@some.email\",\n  \"client\": null\n};\ncy.createBooking(bookingData).then(response => {\n  expect(response.status).to.be.oneOf([200, 201]);\n  expect(response.body.id).to.equal(bookingData.id);\n}).should(response => {\n  if (response.status !== 200 && response.status !== 201) {\n    console.error('Failed to create booking:', response);\n    throw new Error(`Failed to create booking: Received status ${response.status}`);\n  }\n});\ncy.fixture('Advisor_Booking_TS008.json').then(function (dataJson) {\n  _Home.default.navbar.click();\n  _Booking.default.booking.click();\n  _Booking.default.Managebookinglink.click();\n  _Booking.default.contactfora.click();\n  _Booking.default.submit.should('be.disabled');\n  _Booking.default.canceliconduplicate.click();\n  _Booking.default.Managebookinglink.click();\n  _Booking.default.contactfora.click();\n  _Booking.default.goback.click();\n  _Booking.default.contactfora.click();\n  _Booking.default.Otherissuetext.type(dataJson.Otherissuereason);\n  _Booking.default.submit.click();\n  _Booking.default.goit.click();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find content: 'Manage booking' but never did.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find content: 'Manage booking' but never did.\n    at get Managebookinglink (webpack://advisor/./cypress/support/Page Object/Advisor/Booking.js:259:18)\n    at  (webpack://advisor/./cypress/e2e/Advisor/Advisor_Booking_TS008.cy.js:72:4)\n    at getRet (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:119259:20)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.try (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4315:29)\n    at thenFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:119270:60)\n    at then (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:119521:21)\n    at wrapped (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:138450:19)\n    at __webpack_modules__</runCommand (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:144371:15)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseCtx (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "693fcf46-0280-40ff-aa45-887a1817a11a",
+              "parentUUID": "99f94475-ddf7-4fb5-9014-150930343c28",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "693fcf46-0280-40ff-aa45-887a1817a11a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T07:47:22.825Z",
+    "end": "2024-09-23T07:51:16.598Z",
+    "duration": 233773,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e0f943fe-385b-43d6-b473-119d294c3f98",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Partners_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Partners_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "20232e70-76e7-408a-bb32-224dc297421c",
+          "title": "Advisor_Partners_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Partners_TC001_To verify the  sort hotel based on hotel class",
+              "fullTitle": "Advisor_Partners_TS001 Advisor_Partners_TC001_To verify the  sort hotel based on hotel class",
+              "timedOut": null,
+              "duration": 88840,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Partners_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\ncy.NotanadvisorLogin();\ncy.wait(5000);\n_Partner.default.Partner.click();\ncy.wait(5000);\n/// Partner.Banner.should('be.visible')\ncy.url().should('include', 'https://advisor.forastaging.net/partners/hotels');\ncy.wait(5000);\n_Partner.default.Hotel.should('be.visible');\n_Partner.default.Searchbar.should('be.visible');\n_Partner.default.Selecttraveldate.should('be.visible');\n//Partner.Travellers.should('be.visible')\n_Partner.default.Searchbutton.should('be.visible');\n/////////////////////////////Partner.list.should('be.visible')\n_Partner.default.Map.should('be.visible');\n_Partner.default.Preferedpartners.should('be.visible');\n_Partner.default.Preferedpartnersearch.eq(0).scrollIntoView().should('be.visible');\n_Partner.default.Brands.should('be.visible');\n_Partner.default.Brandssearch.should('be.visible');\n_Partner.default.Hoteltype.eq(0).scrollIntoView().should('be.visible');\ncy.wait(2000);\n_Partner.default.Unrated.should('be.visible').click();\n_Partner.default.Unrated.should('be.visible').click();\n_Partner.default.Onestar.scrollIntoView().click({\n  force: true\n});\ncy.wait(5000);\n_Partner.default.onestarresult.eq(0).scrollIntoView().should('be.visible');\n_Partner.default.One.scrollIntoView().should('be.visible');\n_Partner.default.Onestar.scrollIntoView().click();\ncy.wait(6000);\n_Partner.default.Twostar.click();\ncy.wait(5000);\n_Partner.default.Twostarresult.eq(0).scrollIntoView().should('be.visible');\n_Partner.default.Twostar.click();\ncy.wait(5000);\n_Partner.default.Threestar.click();\ncy.wait(3000);\n_Partner.default.Threestarresult.eq(0).scrollIntoView().should('be.visible');\ncy.wait(5000);\n_Partner.default.Threestar.click();\ncy.wait(5000);\n_Partner.default.Fourstar.click();\ncy.wait(5000);\n_Partner.default.Fourstarresult.eq(0).scrollIntoView().should('be.visible');\ncy.wait(5000);\n_Partner.default.Fourstar.click();\ncy.wait(5000);\n_Partner.default.Fivestar.click();\ncy.wait(5000);\n_Partner.default.Fivestarresult.eq(0).scrollIntoView().should('be.visible');\ncy.wait(5000);\n_Partner.default.Fivestar.click();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "a9a25860-3b07-45a2-ac62-301eb85023d9",
+              "parentUUID": "20232e70-76e7-408a-bb32-224dc297421c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Partners_TC002_To verify the hotels based on  partner/brands/show only checkbox/",
+              "fullTitle": "Advisor_Partners_TS001 Advisor_Partners_TC002_To verify the hotels based on  partner/brands/show only checkbox/",
+              "timedOut": null,
+              "duration": 59202,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Partners_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\n_Partner.default.Preferedpartnersearch.click();\ncy.wait(2000);\n_Partner.default.scroll.scrollTo('bottom');\n_Partner.default.virtuosocheckbox.click();\n_Partner.default.Clear.scrollIntoView().click();\n_Partner.default.virtuosocheckbox.should('not.be.checked');\n_Partner.default.virtuosocheckbox.click();\ncy.wait(2000);\n_Partner.default.scroll.scrollTo('top');\ncy.wait(5000);\n//Partner.Preferedpartnersearch.eq(0).click()\ncy.wait(2000);\n_Partner.default.Clear.scrollIntoView().click();\n_Partner.default.scroll.scrollTo('center');\ncy.wait(2000);\n_Partner.default.Jumeirahcheckbox.click();\ncy.wait(5000);\ncy.get('img[alt=\"Partner logo\"]').should('be.visible').and('have.attr', 'src', 'https://fora-production-images.s3.us-west-2.amazonaws.com/assets/suppliers_logos/Jumeirah.png').and('have.attr', 'width', '40').and('have.attr', 'height', '40');\n_Partner.default.Clear.scrollIntoView().click();\ncy.wait(2000);\n_Partner.default.Preferedpartnersearch.scrollIntoView().click({\n  force: true\n});\ncy.wait(2000);\n_Partner.default.Brandssearch.scrollIntoView().click();\n//Partner.Brandscroll.scrollTo('bottom')\ncy.wait(2000);\n_Partner.default.Zazacheckbox.click();\ncy.wait(2000);\n_Partner.default.brandsymbol.eq(0).scrollIntoView().should('be.visible');\n_Partner.default.Clear.scrollIntoView().click();\ncy.wait(2000);\n//cy.scrollTo('center')\n_Partner.default.Oneone.click();\ncy.wait(5000);\n//Partner.Brandssearch.scrollIntoView().click()\n_Partner.default.Nohotelfound.scrollIntoView().should('be.visible');\n_Partner.default.Nohotelfound1.scrollIntoView().should('be.visible');\n_Partner.default.Nohotelfound2.should('be.visible');\n_Partner.default.Nohotelfound3.scrollIntoView().should('be.visible');\n_Partner.default.Nohotelfound4.scrollIntoView().should('be.visible');\ncy.get('[class=\"text-smallLH22 list-disc inline-flex flex-wrap justify-items-start\"]').each($li => {\n  cy.wrap($li).should('contain.text', 'Bookings with children');\n  cy.wrap($li).should('contain.text', 'Multiple rooms');\n  cy.wrap($li).should('contain.text', 'Group bookings');\n  cy.wrap($li).should('contain.text', \"Property isn't in portal\");\n});\n///Partner.Searchbar.click()\n_Partner.default.Preferedcancel.eq(0).click({\n  force: true\n});\ncy.wait(5000);\n_Partner.default.clearresult.should('be.visible');\n_Partner.default.Brandssearch.scrollIntoView().click({\n  force: true\n});\ncy.wait(2000);\n_Partner.default.Hoteltype.should('be.visible');\n_Partner.default.Allexclusivecheckbox.scrollIntoView().click();\ncy.wait(2000);\n_Partner.default.Allexclusivetag.eq(0).scrollIntoView().should('be.visible');\n_Partner.default.Allexclusivecheckbox.click();\n_Partner.default.Allexclusivecheckbox.should('not.be.checked');\n_Partner.default.Preferedpartners.scrollIntoView().should('be.visible');\n_Partner.default.Preferedpartnershotelcheckbox.scrollIntoView().check();\n_Partner.default.Preferedpartnertag.scrollIntoView().should('be.visible');\n_Partner.default.Preferedpartnershotelcheckbox.scrollIntoView().uncheck();\n_Partner.default.Preferedpartnershotelcheckbox.should('not.be.checked');\n_Partner.default.Recommended.click();\ncy.wait(5000);\n_Partner.default.Alphabetical.click();\ncy.wait(5000);\n_Partner.default.Hotelalphabeticalresult.should('be.visible');\n_Partner.default.Alphabetical.eq(0).click();\n_Partner.default.Recommended.click();\n_Partner.default.Hotelrecomenddedresult.should('be.visible');",
+              "err": {},
+              "uuid": "efea4c69-1bc5-4628-bcc3-47eb73d16ede",
+              "parentUUID": "20232e70-76e7-408a-bb32-224dc297421c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Partners_TC003_To verify the  List page",
+              "fullTitle": "Advisor_Partners_TS001 Advisor_Partners_TC003_To verify the  List page",
+              "timedOut": null,
+              "duration": 64453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Partners_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\n_Partner.default.List.scrollIntoView().should('be.visible').click();\ncy.wait(2000);\n_Partner.default.myfavorites.should('be.visible');\n_Partner.default.Zeroproperties.should('be.visible');\n_Partner.default.NewCard.should('be.visible');\n_Partner.default.Newlist.click();\n_Partner.default.Listname.should('be.visible');\n_Partner.default.Listfield.should('be.visible');\n_Partner.default.Cancelbutton.should('be.visible');\n_Partner.default.Addlistbutton.should('be.visible').click();\ncy.wait(1000);\n_Partner.default.Errormsg.should('be.visible');\n_Partner.default.Cancelbutton.should('be.visible').click();\ncy.wait(2000);\n_Partner.default.Newlist.should('be.visible').click();\ncy.wait(2000);\nconst generateShortUniqueName = (length = 10) => {\n  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';\n  let result = '';\n  for (let i = 0; i < length; i++) {\n    result += characters.charAt(Math.floor(Math.random() * characters.length));\n  }\n  return result;\n};\nconst Listname = generateShortUniqueName();\n_Partner.default.Listfield.should('be.visible').type(Listname);\ncy.wait(2000);\n_Partner.default.Addlistbutton.click();\ncy.wait(2000);\n_Partner.default.Newfvrtcard.click();\ncy.wait(2000);\n_Partner.default.Searchbar.clear();\ncy.wait(2000);\n_Partner.default.Searchbutton.click();\ncy.wait(8000);\n_Partner.default.Likebutton.eq(1).scrollIntoView().click();\n_Partner.default.Mylist.should('be.visible');\n_Partner.default.Listcount.should('be.visible');\n_Partner.default.Newlistinsidelist.should('be.visible');\n_Partner.default.Newlistinsidelistcard.should('be.visible');\n_Partner.default.Mylistcancel.should('be.visible');\n_Partner.default.Mylistsave.should('be.visible');\n_Partner.default.Newlistinsidelist.should('be.visible').click();\n_Partner.default.Listname.should('be.visible');\n_Partner.default.Listfield1.should('be.visible');\n_Partner.default.Cancelbutton.should('be.visible');\n_Partner.default.Addlistbutton.should('be.visible').click();\n_Partner.default.Errormsg1.should('be.visible');\n_Partner.default.Cancelbutton.should('be.visible').click();\ncy.wait(2000);\n_Partner.default.Newlist.should('be.visible').click();\ncy.wait(2000);\nconst Listname1 = generateShortUniqueName();\n_Partner.default.Listfield1.should('be.visible').type(Listname1);\ncy.wait(2000);\n_Partner.default.Addlistbutton.should('be.visible').click();\n//Partner.Selectednumber.should('be.visible')\ncy.get('[class=\"flex flex-col p-2 gap-2 rounded-sm border border-lightGreyBorder shadow-[0_2px_10px_0_rgba(181,181,181,0.25)] cursor-pointer hover:border-main border-main !shadow-[0_2px_10px_0_rgba(181,181,181,0.25),0_0_0_1px_#000] bg-lightGreyBg\"]') // Adjust this selector based on your CSS class or style for highlighted cards\n.then($highlightedCards => {\n  const highlightedCount = $highlightedCards.length;\n  // Step 2: Get the text from the \"Lists\" section\n  cy.get('[class=\"text-medium\"]') // Adjust this selector to target the \"4 lists (1 selected)\" text\n  .invoke('text').then(text => {\n    const match = text.match(/(\\d+)\\slists\\s\\((\\d+)\\sselected\\)/);\n    const selectedCount = parseInt(match[2], 10);\n    // Step 3: Assert that the count matches\n    expect(highlightedCount).to.equal(selectedCount);\n  });\n});\ncy.wait(3000);\n_Partner.default.Mylistsave.click();\ncy.wait(2000);\n_Partner.default.Likeicon.should('be.visible');\ncy.wait(2000);\n_Partner.default.Likebutton.eq(5).click();\n_Partner.default.card.click();\n_Partner.default.card1.click();\n_Partner.default.card.click();\n_Partner.default.Highlightedcard.then($highlightedCards => {\n  const highlightedCount = $highlightedCards.length;\n  // Step 2: Get the text from the \"Lists\" section\n  cy.get('[class=\"text-medium\"]').invoke('text').then(text => {\n    const match = text.match(/(\\d+)\\slists\\s\\((\\d+)\\sselected\\)/);\n    const selectedCount = parseInt(match[2], 10);\n    // Step 3: Assert that the count matches\n    expect(highlightedCount).to.equal(selectedCount);\n  });\n});\n_Partner.default.Mylistsave.click();\n_Partner.default.List.scrollIntoView().should('be.visible').click();\ncy.wait(2000);\n_Partner.default.Clickcard.click();\n///Search term is present\n_Partner.default.Searchbar.invoke('val').should('match', /My List: \"\\w+\"/);\ncy.wait(1000);\n///identify if total hotel number is matching with number of hotel visible in the page\ncy.get('[class=\"flex flex-col rounded-sm border bg-white hover:border-tertiaryOld mb-6 overflow-hidden xl:flex-row xl:h-[280px]\"]', {\n  timeout: 10000\n}).then(cards => {\n  const cardCount = cards.length;\n  cy.log('Card Count:', cardCount);\n  cy.get('span.text-small.whitespace-nowrap').invoke('text').then(resultText => {\n    const resultCount = parseInt(resultText.match(/\\d+/)[0]);\n    cy.log('Result Count:', resultCount);\n    // Step 3: Assert that the counts match\n    expect(resultCount).to.equal(cardCount);\n  });\n});\n_Partner.default.Endofresult.should('be.visible');\ncy.get('[class=\"text-smallLH22 list-disc inline-flex flex-wrap justify-items-start\"]').each($li => {\n  cy.wrap($li).should('contain.text', 'Bookings with children');\n  cy.wrap($li).should('contain.text', 'Multiple rooms');\n  cy.wrap($li).should('contain.text', 'Group bookings');\n  cy.wrap($li).should('contain.text', \"Property isn't in portal\");\n});\ncy.get('[class=\"text-mediumLH18 list-decimal justify-items-start flex flex-col gap-2 pl-4\"]').each($li => {\n  cy.wrap($li).should('contain.text', 'Confirm with the property that your desired rate is commissionable.');\n  cy.wrap($li).should('contain.text', 'Input this number into the IATA field to earn commission (all other fields will not be accepted).');\n  cy.wrap($li).should('contain.text', 'Foward confirmations to Fora HQ to ensure commissions.');\n});\n_Partner.default.CopyIATAbutton.click();\n_Partner.default.ExpediaTaap.should('be.visible');\n_Partner.default.ExpediaTaaplogo.should('be.visible');\n_Partner.default.Searchbar.clear();\ncy.wait(2000);\n_Partner.default.Searchbutton.click();\ncy.wait(5000);\n_Partner.default.Likebutton.eq(0).click();\ncy.get('#favorites-list-scroll-container > .grid > :nth-child(2)').click();\n_Partner.default.Highlightedcard // Adjust this selector based on your CSS class or style for highlighted cards\n.then($highlightedCards => {\n  const highlightedCount = $highlightedCards.length;\n  // Step 2: Get the text from the \"Lists\" section\n  cy.get('[class=\"text-medium\"]') // Adjust this selector to target the \"4 lists (1 selected)\" text\n  .invoke('text').then(text => {\n    const match = text.match(/(\\d+)\\slists\\s\\((\\d+)\\sselected\\)/);\n    const selectedCount = parseInt(match[2], 10);\n    // Step 3: Assert that the count matches\n    expect(highlightedCount).to.equal(selectedCount);\n  });\n});\n_Partner.default.Mylistsave.click();",
+              "err": {},
+              "uuid": "522c2def-6ba9-4579-bec1-430da7ca8898",
+              "parentUUID": "20232e70-76e7-408a-bb32-224dc297421c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Partners_TC001_To verify the  List page action buttton edit/delete",
+              "fullTitle": "Advisor_Partners_TS001 Advisor_Partners_TC001_To verify the  List page action buttton edit/delete",
+              "timedOut": null,
+              "duration": 16322,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Partners_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\n_Partner.default.List.scrollIntoView().should('be.visible').click();\ncy.wait(3000);\n_Partner.default.Actionbutton.eq(0).click();\n_Partner.default.Editbutton.should('be.visible');\n_Partner.default.Deletebutton.should('be.visible');\n_Partner.default.Editbutton.click();\n_Partner.default.Cancelbutton.click();\n_Partner.default.Actionbutton.eq(0).click();\n_Partner.default.Editedcard.eq(1).invoke('text').then(initialName => {\n  _Partner.default.Editbutton.click();\n  const generateShortUniqueName = (length = 10) => {\n    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';\n    let result = '';\n    for (let i = 0; i < length; i++) {\n      result += characters.charAt(Math.floor(Math.random() * characters.length));\n    }\n    return result;\n  };\n  const Listname = generateShortUniqueName();\n  cy.wait(2000);\n  cy.get('[class=\"form-control py-[11px] text-medium\"]').eq(1).clear().type(Listname);\n  _Partner.default.Mylistsave.click();\n  _Partner.default.Editedcard.eq(1).invoke('text').should('not.eq', initialName).and('eq', Listname);\n  _Partner.default.Actionbutton.eq(1).click();\n  cy.wait(2000);\n  _Partner.default.Deletebutton.click();\n  _Partner.default.Deletetext.should('be.visible');\n  _Partner.default.Deletetext1.should('be.visible');\n  _Partner.default.Deletelist.should('be.visible');\n  _Partner.default.Nokeeplist.should('be.visible').click();\n  _Partner.default.Actionbutton.eq(1).click();\n  cy.wait(2000);\n  _Partner.default.Deletebutton.click();\n  _Partner.default.Deletelist.should('be.visible').click();\n});",
+              "err": {},
+              "uuid": "85f1cfe9-9c43-4449-af4d-dc957436bec4",
+              "parentUUID": "20232e70-76e7-408a-bb32-224dc297421c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9a25860-3b07-45a2-ac62-301eb85023d9",
+            "efea4c69-1bc5-4628-bcc3-47eb73d16ede",
+            "522c2def-6ba9-4579-bec1-430da7ca8898",
+            "85f1cfe9-9c43-4449-af4d-dc957436bec4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 228817,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

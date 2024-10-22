@@ -1,0 +1,199 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T07:57:27.398Z",
+    "end": "2024-09-23T07:58:03.016Z",
+    "duration": 35618,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5295510c-8095-4c5f-8883-c106113801be",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Profile_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Profile_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c41da324-29b4-4db2-970a-29ae14474270",
+          "title": "Advisor_Profile_TS001 ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Profile_TC001_To verify  user profile Home page",
+              "fullTitle": "Advisor_Profile_TS001  Advisor_Profile_TC001_To verify  user profile Home page",
+              "timedOut": null,
+              "duration": 12979,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Profile_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//  cy.Login1()\n//cy.viewport(390,844)\ncy.NotanadvisorLogin();\n_Home.default.navbar.click();\ncy.wait(2000);\n_Foraprofile.default.Usersetting.click();\n_Foraprofile.default.Profilename.invoke('text').then(Profilename => {\n  cy.log('Profilename:', Profilename);\n});\n_Foraprofile.default.Firaemail.should('be.visible');\n_Foraprofile.default.Firaemail1.eq(0).should('be.visible');\n_Foraprofile.default.Recoveryemail;\n_Foraprofile.default.Firaemail1.eq(1).should('be.visible');\n_Foraprofile.default.Verification.should('be.visible');\n_Foraprofile.default.Personalinfo.should('be.visible');\n_Foraprofile.default.Edit.should('be.visible');\n_Foraprofile.default.Personalinfosection.invoke('text').then(Personalinfosection => {\n  cy.log('Personalinfo:', Personalinfosection);\n});\n_Foraprofile.default.Commissionplanandcontract;\n_Foraprofile.default.Commissionplanandcontractsection.invoke('text').then(Commissionplanandcontract => {\n  cy.log('Commissionplan:', Commissionplanandcontract);\n});\n/*  Foraprofile.Previousdocuments.click()\n  Foraprofile.Previousdocuments1.invoke('text')\n  .then((Previousdocuments1) => {        \n    cy.log('Previousdocuments:',Previousdocuments1);\n  })*/\n_Foraprofile.default.Gotobillingportal.scrollIntoView().should('be.visible');\n_Foraprofile.default.Logout.should('be.visible');",
+              "err": {},
+              "uuid": "386d4d22-51a1-481f-9a15-ad93d15ea524",
+              "parentUUID": "c41da324-29b4-4db2-970a-29ae14474270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Profile_TC002_To verify if user can edit profile details on google.",
+              "fullTitle": "Advisor_Profile_TS001  Advisor_Profile_TC002_To verify if user can edit profile details on google.",
+              "timedOut": null,
+              "duration": 163,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Profile_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Foraprofile.default.Editongoogle.click();",
+              "err": {},
+              "uuid": "8069e128-4933-4724-a69c-743d9d8fd6ae",
+              "parentUUID": "c41da324-29b4-4db2-970a-29ae14474270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Profile_TC003_To verify  if user can edit personal information",
+              "fullTitle": "Advisor_Profile_TS001  Advisor_Profile_TC003_To verify  if user can edit personal information",
+              "timedOut": null,
+              "duration": 9056,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Profile_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Foraprofile.default.Edit.eq(0).click();\n_Foraprofile.default.Editpersonalinfo.should('be.visible');\n_Foraprofile.default.Address.should('be.visible');\n_Foraprofile.default.Addresssubheader.should('be.visible');\ncy.fixture('Advisor_Profile_TS001.json').then(function (dataJson) {\n  /* Foraprofile.country.eq(0).click({force:true})\n  // Foraprofile.countrytext.eq(0).type('United States of America')\n  Foraprofile.typecountryname .click()\n   cy.wait(2000)\n  Foraprofile.Savebutton.should('be.disabled')*/\n  _Foraprofile.default.Addressfield.clear().type(dataJson.Address);\n  cy.wait(1000);\n  _Foraprofile.default.City.clear().type(dataJson.City);\n  cy.wait(1000);\n  _Foraprofile.default.State.clear().type(dataJson.State);\n  cy.wait(1000);\n  _Foraprofile.default.Zipcode.clear().type(dataJson.Zipcodenumber);\n  cy.wait(1000);\n  _Foraprofile.default.Phonenumber.clear().type(dataJson.Correctnumber);\n  cy.wait(2000);\n  _Foraprofile.default.Savebutton.click();\n  _Foraprofile.default.Personalinfosection.invoke('text').then(Personalinfosection => {\n    cy.log('Personalinfo:', Personalinfosection);\n  });\n  cy.contains('yyyy');\n});",
+              "err": {},
+              "uuid": "f54ba304-d64b-4a48-abe1-7533a2cd6bec",
+              "parentUUID": "c41da324-29b4-4db2-970a-29ae14474270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Profile_TC004_To verify  if user can view aggrements",
+              "fullTitle": "Advisor_Profile_TS001  Advisor_Profile_TC004_To verify  if user can view aggrements",
+              "timedOut": null,
+              "duration": 2361,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Profile_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\nconst specificLinkSelector = 'a[href=\"https://fora-advisor-contracts.s3.us-west-2.amazonaws.com/Fora+-+Advisor+Agreement+-+Main+Agreement+and+Exhibits+2022_Portal_v1.pdf\"]';\nconst specificLinkSelector1 = 'a[href=\"https://fora-advisor-contracts.s3.us-west-2.amazonaws.com/Fora+-+Advisor+Agreement+-+Schedule+1+20230301_v1_2023Tier79.pdf\"]';\ncy.wait(2000);\n_Foraprofile.default.View.eq(0).click();\n/*cy.get(specificLinkSelector).should('have.attr', 'href').then((href) => {\n  cy.request({ url: href, failOnStatusCode: false }).then((response) => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${href}`);\n    }\n  });\n});*/\n_Foraprofile.default.View1.eq(1).click();\n/*cy.get(specificLinkSelector).should('have.attr', 'href').then((href) => {\n  cy.request({ url: href, failOnStatusCode: false }).then((response) => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${href}`);\n    }\n  });\n});*/\n//Foraprofile.view1.eq(2).click()",
+              "err": {},
+              "uuid": "22d9649c-e830-402e-abf2-86ac71fbe172",
+              "parentUUID": "c41da324-29b4-4db2-970a-29ae14474270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Profile_TC005_To verify if user can  access billing portal",
+              "fullTitle": "Advisor_Profile_TS001  Advisor_Profile_TC005_To verify if user can  access billing portal",
+              "timedOut": null,
+              "duration": 2112,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Profile_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Foraprofile.default.Gotobillingportal.click({\n  force: true\n});\ncy.wait(2000);",
+              "err": {},
+              "uuid": "a8f2ab8b-b714-43f2-9ea1-5e1864289fa9",
+              "parentUUID": "c41da324-29b4-4db2-970a-29ae14474270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Profile_TC006_To verify if user can logout of the portal",
+              "fullTitle": "Advisor_Profile_TS001  Advisor_Profile_TC006_To verify if user can logout of the portal",
+              "timedOut": null,
+              "duration": 4130,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Profile_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n_Foraprofile.default.Logout.click();\ncy.wait(2000);\n//cy.url().should('include', 'https://advisor.forastaging.net/login');",
+              "err": {},
+              "uuid": "2c677aae-125e-485a-ba62-909f776946c4",
+              "parentUUID": "c41da324-29b4-4db2-970a-29ae14474270",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "386d4d22-51a1-481f-9a15-ad93d15ea524",
+            "8069e128-4933-4724-a69c-743d9d8fd6ae",
+            "f54ba304-d64b-4a48-abe1-7533a2cd6bec",
+            "22d9649c-e830-402e-abf2-86ac71fbe172",
+            "a8f2ab8b-b714-43f2-9ea1-5e1864289fa9",
+            "2c677aae-125e-485a-ba62-909f776946c4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T04:48:15.452Z",
+    "end": "2024-09-23T04:48:28.713Z",
+    "duration": 13261,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fbde403c-05f5-4755-8af8-68b6f9170d84",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Fora Email_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Fora Email_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f89f43c6-f7d7-4b2e-81e2-8b722d25cd3e",
+          "title": "Advisor_Fora Email_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Fora Email_TC001_To verify if user can access Fora Email",
+              "fullTitle": "Advisor_Fora Email_TS001 Advisor_Fora Email_TC001_To verify if user can access Fora Email",
+              "timedOut": null,
+              "duration": 9862,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Fora Email_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//  cy.Login1()\ncy.NotanadvisorLogin();\n_Home.default.navbar.click();\n_Foraemail.default.Foraemail.invoke('removeAttr', 'target').click();\n//cy.url().should('include', 'https://accounts.google.com');// Replace with your expected origin\n/*cy.origin('https://accounts.google.com', () => {//check if user is navigating to the user's personal email address, to draft an email.\n cy.on('uncaught:exception', (err,runnable) => { \n   return false\n }) \n})*/",
+              "err": {},
+              "uuid": "1a2ad0af-22b6-42b5-a64e-d961044b1f85",
+              "parentUUID": "f89f43c6-f7d7-4b2e-81e2-8b722d25cd3e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1a2ad0af-22b6-42b5-a64e-d961044b1f85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9862,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

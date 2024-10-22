@@ -1,0 +1,199 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-23T05:15:29.132Z",
+    "end": "2024-09-23T05:16:27.112Z",
+    "duration": 57980,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "93ddc0a9-60ca-486b-8219-730b58022765",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Resource_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Resource_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+          "title": "Advisor_Resource_TS001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Resource_TC001_To verify Templates home page ",
+              "fullTitle": "Advisor_Resource_TS001 Advisor_Resource_TC001_To verify Templates home page ",
+              "timedOut": null,
+              "duration": 16781,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Resource_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n// cy.Login1()\n//cy.NotanadvisorLogin()\ncy.NotanadvisortravelLogin();\n_Home.default.navbar.click();\n_Marketing.default.Resource.scrollIntoView().click();\ncy.wait(2000);\n_Resource.default.Resource.click();\n_Resource.default.resource.should('be.visible');\n_Resource.default.resourcetext.should('be.visible');\n// Resource.Brandresource.should('be.visible')\n_Resource.default.Emailtemplate.should('be.visible');\n_Resource.default.Emailtemplatetext.should('be.visible');\n//Resource.Emailanditineray.should('be.visible')\n_Resource.default.Forms.scrollIntoView().should('be.visible');\n//    cy.scrollTo(\"bottom\")\n_Resource.default.Otherresource.scrollIntoView().should('be.visible');",
+              "err": {},
+              "uuid": "3e202541-3466-4b38-bbba-f290729bb421",
+              "parentUUID": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Resource_TC002_To verify if user can access Email templates  ",
+              "fullTitle": "Advisor_Resource_TS001 Advisor_Resource_TC002_To verify if user can access Email templates  ",
+              "timedOut": null,
+              "duration": 1143,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Resource_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\nconst baseLink = 'https://docs.google.com/document/d/1TzXHZlWfFw6cO3hU_PJK4xRM1YpnU0IqscMmsusoRms/edit#heading=h.7rp1qhe6he7n';\nconst specificLinkSelector = `a[href^=\"${baseLink}\"]`;\n_Resource.default.Emailtemplate.scrollIntoView().should('be.visible');\n_Resource.default.Emailtemplatetext.should('be.visible');\n_Resource.default.openingoogledrive.scrollIntoView().click();\ncy.get(specificLinkSelector).should('have.attr', 'href').then(href => {\n  const url = new URL(href);\n  url.searchParams.delete('authuser'); // Remove the authuser parameter\n  const validatedHref = url.toString();\n  cy.request({\n    url: validatedHref,\n    failOnStatusCode: false\n  }).then(response => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${validatedHref}`);\n    }\n  });\n});",
+              "err": {},
+              "uuid": "b90dc373-87a8-4766-9623-498d4f1f2e52",
+              "parentUUID": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Resource_TC00_To verify if user can access  itinerary templates  ",
+              "fullTitle": "Advisor_Resource_TS001 Advisor_Resource_TC00_To verify if user can access  itinerary templates  ",
+              "timedOut": null,
+              "duration": 1810,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Resource_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\nconst specificLinkSelector = 'a[href=\"https://www.canva.com/design/DAGEMADndh4/TBBzk-H9pCorVstS_MgzWg/view?utm_content=DAGEMADndh4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview\"]';\n_Resource.default.Iternarytemplate.should('be.visible');\n_Resource.default.Iternarytemplatetext.should('be.visible');\n_Resource.default.openingoogledrive.click();\ncy.get(specificLinkSelector).should('have.attr', 'href').then(href => {\n  cy.request({\n    url: href,\n    failOnStatusCode: false\n  }).then(response => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${href}`);\n    }\n  });\n});",
+              "err": {},
+              "uuid": "77cb21f8-9371-4093-9813-820568597807",
+              "parentUUID": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Resource_TC003_To verify if user can access Forms  ",
+              "fullTitle": "Advisor_Resource_TS001 Advisor_Resource_TC003_To verify if user can access Forms  ",
+              "timedOut": null,
+              "duration": 2783,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Resource_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\nconst baseLink = 'https://drive.google.com/drive/folders/1gahh9yQlLkQwDfEwUVy9E6id7YIWM6Fo?usp=sharing';\nconst specificLinkSelector = `a[href^=\"${baseLink}\"]`;\n_Resource.default.Forms.should('be.visible');\n_Resource.default.Formstext.should('be.visible');\n_Resource.default.openingoogledrive.click();\ncy.get(specificLinkSelector).should('have.attr', 'href').then(href => {\n  const url = new URL(href);\n  url.searchParams.delete('authuser'); // Remove the authuser parameter\n  const validatedHref = url.toString();\n  cy.request({\n    url: validatedHref,\n    failOnStatusCode: false\n  }).then(response => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${validatedHref}`);\n    }\n  });\n});",
+              "err": {},
+              "uuid": "3d00b08e-e850-494c-b97a-90fc0eca691b",
+              "parentUUID": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Resource_TC004_To verify if user can access other resources  ",
+              "fullTitle": "Advisor_Resource_TS001 Advisor_Resource_TC004_To verify if user can access other resources  ",
+              "timedOut": null,
+              "duration": 2437,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Resource_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\nconst baseLink = 'https://drive.google.com/drive/folders/1NzGRpFImLwZ9ZbuxEkeoiKFUjyQcJhnc?usp=sharing';\nconst specificLinkSelector = `a[href^=\"${baseLink}\"]`;\n_Resource.default.Otherresource.should('be.visible');\n_Resource.default.Otherresourcetext.should('be.visible');\n_Resource.default.openingoogledrive.click();\ncy.get(specificLinkSelector).should('have.attr', 'href').then(href => {\n  const url = new URL(href);\n  url.searchParams.delete('authuser'); // Remove the authuser parameter\n  const validatedHref = url.toString();\n  cy.request({\n    url: validatedHref,\n    failOnStatusCode: false\n  }).then(response => {\n    if (response.status !== 200) {\n      cy.log(`Broken link found: ${validatedHref}`);\n    }\n  });\n});",
+              "err": {},
+              "uuid": "d9ecbe41-d93a-4297-85be-df2afbfd6cd4",
+              "parentUUID": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Resource_TC005_To verify Report an issue moduel ",
+              "fullTitle": "Advisor_Resource_TS001 Advisor_Resource_TC005_To verify Report an issue moduel ",
+              "timedOut": null,
+              "duration": 25472,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Resource_TS001.cy.js\"\n}",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.wait(3000);\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.scrollIntoView().click();\n_Partner.default.Issuetopicheader.should('be.visible');\n_ForaGuideandProfile.default.Issuetopicdropdown.should('be.visible').click();\n_Partner.default.dropdownvalue1.should('be.visible');\n_Partner.default.dropdownvalue2.should('be.visible');\n_Partner.default.dropdownvalue3.should('be.visible');\n_Partner.default.dropdownvalue4.should('be.visible');\n_Partner.default.dropdownvalue5.should('be.visible');\n_Partner.default.dropdownvalue6.should('be.visible');\n_Partner.default.dropdownvalue1.click();\n_Partner.default.Describetheissue.should('be.visible');\n_Partner.default.Describetheissuefield.should('be.visible');\n_Partner.default.Cancel.should('be.visible');\n_Partner.default.Report.should('be.visible').click();\n//Partner.Error1.should('be.visible')\n_Partner.default.Error2.should('be.visible');\n_Partner.default.Issueseverityheader.should('be.visible');\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue1.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"error\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\ncy.wait(2000);\n_Home.default.navbar.click();\n_Partner.default.Reportanissue.scrollIntoView().click();\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_ForaGuideandProfile.default.Issuetopicdropdown.should('be.visible').click();\n_Partner.default.dropdownvalue1.should('be.visible');\n_Partner.default.dropdownvalue2.should('be.visible');\n_Partner.default.dropdownvalue3.should('be.visible');\n_Partner.default.dropdownvalue4.should('be.visible');\n_Partner.default.dropdownvalue5.should('be.visible');\n_Partner.default.dropdownvalue6.should('be.visible');\ncy.wait(2000);\n_Partner.default.dropdownvalue2.click();\ncy.wait(2000);\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue2.click();\n_Partner.default.Issuetypeheader.should('be.visible');\n_Partner.default.Issuetypedropdown.click();\ncy.wait(2000);\n_Partner.default.Issuetypedropdown1.should('be.visible');\n_Partner.default.Issuetypedropdown2.should('be.visible');\n_Partner.default.Issuetypedropdown3.should('be.visible');\n_Partner.default.Issuetypedropdown4.should('be.visible');\ncy.wait(2000);\n_Partner.default.Issuetypedropdown5.eq(4).should('be.visible');\n_Partner.default.Issuetypedropdown2.click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"error\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();\n//Marketing\n/* cy.wait(2000)\n Home.navbar.click()\n Partner.Reportanissue.scrollIntoView().click()\n cy.wait(2000)\n Partner.Reportanissueheader.should('be.visible')\n Partner.Reportanissuetext.should('be.visible')\n Partner.Issuetopicheader.should('be.visible')\n Guideandprofile.Issuetopicdropdown.should('be.visible').click()\n Partner.dropdownvalue3.click()\n cy.wait(2000)\n Partner.Issueseveritydropdown.click()\n Partner.Issueseveritydropdownvalue3.should('be.visible').click()\n cy.wait(2000)\n Partner.Issuetypedropdown.click()\n Partner.Marketingissuetypedropdown1.should('be.visible')\n Partner.Marketingissuetypedropdown2.should('be.visible')\n Partner.Marketingissuetypedropdown3.should('be.visible')\n Partner.Marketingissuetypedropdown4.should('be.visible')\n Partner.Marketingissuetypedropdown5.should('be.visible')\n Partner.Marketingissuetypedropdown6.should('be.visible')\n cy.wait(2000)\n Partner.Marketingissuetypedropdown7.eq(6).should('be.visible')\n Partner.Marketingissuetypedropdown3.click()\n Partner.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\")\n Partner.Report.click()\n Partner.rightmarks.should('be.visible')\n Partner.successtext.should('be.visible')\n Partner.successsubtext.should('be.visible')\n Partner.close.click()\n ////Partners\n cy.wait(2000)\n Home.navbar.click()\n Partner.Reportanissue.scrollIntoView().click()\n cy.wait(2000)\n Partner.Reportanissueheader.should('be.visible')\n Partner.Reportanissuetext.should('be.visible')\n Partner.Issuetopicheader.should('be.visible')\n Guideandprofile.Issuetopicdropdown.should('be.visible').click()\n Partner.dropdownvalue4.click()\n cy.wait(2000)\n Partner.Issueseveritydropdown.click()\n Partner.Issueseveritydropdownvalue2.should('be.visible').click()\n cy.wait(2000)\n Partner.Issuetypedropdown.click()\n Partner.Partnerissuetypedropdown1.should('be.visible')\n Partner.Partnerissuetypedropdown2.should('be.visible')\n Partner.Partnerissuetypedropdown3.should('be.visible')\n Partner.Partnerissuetypedropdown4.should('be.visible')\n Partner.Partnerissuetypedropdown5.should('be.visible')\n Partner.Partnerissuetypedropdown6.eq(5).should('be.visible')\n Partner.Partnerissuetypedropdown5.should('be.visible').click()\n Partner.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\")\n Partner.Report.click()\n Partner.rightmarks.should('be.visible')\n Partner.successtext.should('be.visible')\n Partner.successsubtext.should('be.visible')\n Partner.close.click()\n //General feedback\n cy.wait(2000)\n Home.navbar.click()\n Partner.Reportanissue.scrollIntoView().click()\n cy.wait(2000)\n Partner.Reportanissueheader.should('be.visible')\n Partner.Reportanissuetext.should('be.visible')\n Partner.Issuetopicheader.should('be.visible')\n Guideandprofile.Issuetopicdropdown.should('be.visible').click()\n Partner.dropdownvalue6.click()\n cy.wait(2000)\n Partner.Issueseveritydropdown.click()\n Partner.Issueseveritydropdownvalue3.should('be.visible').click()\n cy.wait(2000)\n Partner.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\")\n Partner.Report.click()\n Partner.rightmarks.should('be.visible')\n Partner.successtext.should('be.visible')\n Partner.successsubtext.should('be.visible')\n Partner.close.click()\n cy.wait(2000)\n /// Training\n cy.wait(2000)\n Home.navbar.click()\n Partner.Reportanissue.scrollIntoView().click()\n cy.wait(2000)\n Partner.Reportanissueheader.should('be.visible')\n Partner.Reportanissuetext.should('be.visible')\n Partner.Issuetopicheader.should('be.visible')\n Guideandprofile.Issuetopicdropdown.should('be.visible').click()\n Partner.dropdownvalue5.click()\n Partner.Issueseveritydropdown.click()\n Partner.Issueseveritydropdownvalue3.should('be.visible').click()\n cy.wait(2000)\n Partner.Issuetypedropdown.click()\n Partner.Trainerissuetypedropdown1.should('be.visible')\n Partner.Trainerissuetypedropdown2.should('be.visible')\n Partner.Trainerissuetypedropdown3.should('be.visible')\n Partner.Trainerissuetypedropdown4.should('be.visible')\n Partner.Trainerissuetypedropdown5.should('be.visible')\n Partner.Trainerissuetypedropdown6.should('be.visible')\n Partner.Trainerissuetypedropdown7.should('be.visible')\n Partner.Trainerissuetypedropdown8.eq(7).should('be.visible')\n Partner.Trainerissuetypedropdown3.should('be.visible').click()\n cy.wait(2000)\n Partner.Describetheissuefield.should('be.visible').type(\"Testttttttttttttt\")\n Partner.Report.click()\n Partner.rightmarks.should('be.visible')\n Partner.successtext.should('be.visible')\n Partner.successsubtext.should('be.visible')\n Partner.close.click()\n cy.wait(2000)*/",
+              "err": {},
+              "uuid": "8d39b8fc-431b-4bb6-ae1f-cb28bcbea620",
+              "parentUUID": "35f77ce6-1a6d-4338-bff8-6fc40972a72e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e202541-3466-4b38-bbba-f290729bb421",
+            "b90dc373-87a8-4766-9623-498d4f1f2e52",
+            "77cb21f8-9371-4093-9813-820568597807",
+            "3d00b08e-e850-494c-b97a-90fc0eca691b",
+            "d9ecbe41-d93a-4297-85be-df2afbfd6cd4",
+            "8d39b8fc-431b-4bb6-ae1f-cb28bcbea620"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50426,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

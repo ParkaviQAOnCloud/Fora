@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2024-09-18T10:09:32.877Z",
+    "end": "2024-09-18T10:10:30.536Z",
+    "duration": 57659,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "30c6ad56-97cc-4f79-856b-1e206d792311",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Advisor\\Advisor_Policy_TS001.cy.js",
+      "file": "cypress\\e2e\\Advisor\\Advisor_Policy_TS001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a2aba7b3-0eed-4a33-bfd8-aa033924ebd7",
+          "title": "Advisor_Policies_TS001 ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Advisor_Policies_TC001_To verify Community guideline Home page content",
+              "fullTitle": "Advisor_Policies_TS001  Advisor_Policies_TC001_To verify Community guideline Home page content",
+              "timedOut": null,
+              "duration": 35665,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Policy_TS001.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor\\\\Advisor_Policy_TS001.cy.js\\\\Advisor_Policies_TS001 -- Advisor_Policies_TC001_To verify Community guideline Home page content (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\n//  cy.Login1()\ncy.NotanadvisorLogin();\ncy.viewport(1500, 785);\ncy.wait(2000);\n_Policy.default.Policy.click();\ncy.wait(2000);\ncy.url().should('include', 'https://advisor.forastaging.net/community-guidelines');\n_Policy.default.Infobanner.should('be.visible');\n_Policy.default.Text1.first().within(() => {\n  // Verify the text of each list item\n  cy.get('li').eq(0).should('contain.text', 'Community support and interaction create a continuous learning environment');\n  cy.get('li').eq(1).should('contain.text', 'Size creates influence with our partner network');\n  cy.get('li').eq(2).should('contain.text', 'Scale allows us to invest in people to build a world-class technology platform');\n  cy.get('li').eq(3).should('contain.text', 'A large and diverse community creates crossover awareness among consumers');\n});\n_Policy.default.Policessubheader.should('be.visible');\n_Policy.default.PolicesText1.should('be.visible');\n_Policy.default.PolicesText.should('be.visible');\n_Policy.default.Policylink.click();\n_Policy.default.Textlist.eq(1).within(() => {\n  // Verify the text of each list item\n  cy.get('li').eq(0).should('contain.text', 'Access to Partners ');\n  cy.get('li').eq(1).should('contain.text', 'Advisor Content ');\n  cy.get('li').eq(2).should('contain.text', 'Advisor Referral ');\n  cy.get('li').eq(3).should('contain.text', 'Cruise FAMs & CLIA ');\n  cy.get('li').eq(4).should('contain.text', 'Destination Management Company (DMC) ');\n  cy.get('li').eq(5).should('contain.text', 'FAMs & Conference ');\n  cy.get('li').eq(6).should('contain.text', 'Instagram ');\n  cy.get('li').eq(7).should('contain.text', 'Site Visit policy');\n  cy.get('li').eq(8).should('contain.text', 'Travel Agent Rates policy');\n  cy.get('li').eq(9).should('contain.text', 'Virtuoso policy');\n});\n_Policy.default.Communityguideline.scrollIntoView().should('be.visible');\n_Policy.default.Communityguidelinesubheader.scrollIntoView().should('be.visible');\n_Policy.default.Communityguidelinesubheader1.scrollIntoView().should('be.visible');\n_Policy.default.Textlist.eq(2).within(() => {});\n_Policy.default.Communityguidelinesubheader1.scrollIntoView().should('be.visible');\n_Policy.default.Communityguidelinesubheader2.scrollIntoView().should('be.visible');\n_Policy.default.Communityguidelinesubheader3.scrollIntoView().should('be.visible');\n_Policy.default.Communityguidelinesubheader4.scrollIntoView().should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.pt-1 > [href=\"/community-guidelines\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.pt-1 > [href=\"/community-guidelines\"]`, but never found it.\n    at get Policy (webpack://advisor/./cypress/support/Page Object/Advisor/Policy.js:5:14)\n    at  (webpack://advisor/./cypress/e2e/Advisor/Advisor_Policy_TS001.cy.js:19:0)\n    at __webpack_modules__</setRunnable/runnable.fn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:138717:43)\n    at callFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157333:21)\n    at __webpack_modules__</Runnable.prototype.run (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157320:13)\n    at __webpack_modules__</create/onRunnableRun (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:163244:30)\n    at finallyHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4072:23)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "25251978-e8da-4de5-a5c8-c1282a20e9e8",
+              "parentUUID": "a2aba7b3-0eed-4a33-bfd8-aa033924ebd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Policies_TC002_To verify Community guideline Home page content",
+              "fullTitle": "Advisor_Policies_TS001  Advisor_Policies_TC002_To verify Community guideline Home page content",
+              "timedOut": null,
+              "duration": 4225,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Policy_TS001.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor\\\\Advisor_Policy_TS001.cy.js\\\\Advisor_Policies_TS001 -- Advisor_Policies_TC002_To verify Community guideline Home page content (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.viewport(1500, 785);\ncy.url().should('include', 'https://advisor.forastaging.net/access-to-partners-policy');\n_Policy.default.Accesstopartnerpolicy.should('be.visible');\n_Policy.default.Accesstopartnerpolicy.should('be.visible');\n_Policy.default.Accesstopartnerpolicytext.should('be.visible');\n_Policy.default.Certifiedandadvancestatus.should('be.visible');\n_Policy.default.Partnercontact.should('be.visible');\n_Policy.default.Partnercontacttext.should('be.visible');\n_Policy.default.Partnercontacttext1.should('be.visible');\n_Policy.default.Textlist.eq(0).should('be.visible');\n_Policy.default.Partnercontactlink.click();\n_Policy.default.Partnercontactlink1.click();\n_Policy.default.Partnercontactlink2.click();\n_Policy.default.Partnercontactlink3.click();\n_Policy.default.Partnerevent.should('be.visible');\n_Policy.default.Textlist.eq(1).should('be.visible');\n_Policy.default.Partnerproandstatus.should('be.visible');\n_Policy.default.Partnerlogin.should('be.visible');\n_Policy.default.Partnerproandstatuslink.click();\n_Policy.default.Partnercontactsheader.should('be.visible');\n_Policy.default.Partnercontactstext.should('be.visible');\n_Policy.default.Partnercontactstext1.should('be.visible');\n_Policy.default.Partnercontactstext2.should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://advisor.forastaging.net/login' to include 'https://advisor.forastaging.net/access-to-partners-policy'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://advisor.forastaging.net/login' to include 'https://advisor.forastaging.net/access-to-partners-policy'\n    at  (webpack://advisor/./cypress/e2e/Advisor/Advisor_Policy_TS001.cy.js:67:9)\n    at __webpack_modules__</setRunnable/runnable.fn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:138717:43)\n    at callFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157333:21)\n    at __webpack_modules__</Runnable.prototype.run (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157320:13)\n    at __webpack_modules__</create/onRunnableRun (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:163244:30)\n    at finallyHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4072:23)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1589:21)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/Promise.prototype._resolveCallback (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1439:57)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1531:17)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2950:14)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._iterate (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2920:31)\n    at init (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2884:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1573:21)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2950:14)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1581:26)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/MappingPromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4987:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1581:26)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "2d6559a4-7d9c-4479-acfe-70c82ad828a1",
+              "parentUUID": "a2aba7b3-0eed-4a33-bfd8-aa033924ebd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advisor_Policies_TC003_To Check Report an issue popup",
+              "fullTitle": "Advisor_Policies_TS001  Advisor_Policies_TC003_To Check Report an issue popup",
+              "timedOut": null,
+              "duration": 10242,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\Advisor\\\\Advisor_Policy_TS001.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Advisor\\\\Advisor_Policy_TS001.cy.js\\\\Advisor_Policies_TS001 -- Advisor_Policies_TC003_To Check Report an issue popup (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.wait(5000);\ncy.viewport(1500, 785);\n_Partner.default.Reportanissue.scrollIntoView().click();\n//  cy.wait(5000)\n_Partner.default.Reportanissueheader.should('be.visible');\n_Partner.default.Reportanissuetext.should('be.visible');\n_Partner.default.Issuetopicheader.should('be.visible');\n_Newhome.default.issuetypedropdown.should('be.visible').eq(0).click();\ncy.wait(2000);\n_Partner.default.dropdownvalue1.should('be.visible');\n_Partner.default.dropdownvalue2.should('be.visible');\n_Partner.default.dropdownvalue3.should('be.visible');\n_Partner.default.dropdownvalue4.should('be.visible');\n_Partner.default.dropdownvalue5.should('be.visible');\n_Partner.default.dropdownvalue6.should('be.visible');\n_Partner.default.dropdownvalue1.click();\n_Partner.default.Describetheissue.should('be.visible');\n_Partner.default.Describetheissuefield.should('be.visible');\n_Partner.default.Cancel.should('be.visible');\n_Partner.default.Report.should('be.visible').click();\n//Partner.Error1.should('be.visible')\n_Partner.default.Error2.should('be.visible');\n_Partner.default.Issueseverityheader.should('be.visible');\n_Partner.default.Issueseveritydropdown.click();\n_Partner.default.Issueseveritydropdownvalue1.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue3.should('be.visible');\n_Partner.default.Issueseveritydropdownvalue2.should('be.visible').click();\n_Partner.default.Describetheissuefield.should('be.visible').type(\"error\");\n_Partner.default.Report.click();\n_Partner.default.rightmarks.should('be.visible');\n_Partner.default.successtext.should('be.visible');\n_Partner.default.successsubtext.should('be.visible');\n_Partner.default.close.click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `//button[normalize-space()='Report Issue']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `//button[normalize-space()='Report Issue']`, but never found it.\n    at get Reportanissue (webpack://advisor/./cypress/support/Page Object/Advisor/Partner.js:1384:22)\n    at  (webpack://advisor/./cypress/e2e/Advisor/Advisor_Policy_TS001.cy.js:100:8)\n    at __webpack_modules__</setRunnable/runnable.fn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:138717:43)\n    at callFn (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157333:21)\n    at __webpack_modules__</Runnable.prototype.run (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:157320:13)\n    at __webpack_modules__</create/onRunnableRun (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:163244:30)\n    at finallyHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4072:23)\n    at tryCatcher (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1807:23)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1519:31)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1589:21)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/Promise.prototype._resolveCallback (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1439:57)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1531:17)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1576:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2950:14)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._iterate (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2920:31)\n    at init (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2884:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1573:21)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2950:14)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1581:26)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at __webpack_modules__</module.exports/Promise.prototype._fulfill (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1645:18)\n    at __webpack_modules__</module.exports/PromiseArray.prototype._resolve (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2932:19)\n    at __webpack_modules__</module.exports/MappingPromiseArray.prototype._promiseFulfilled (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:4987:18)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1581:26)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1621:10)\n    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2400:24)\n    at __webpack_modules__</Async.prototype._drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2416:16)\n    at __webpack_modules__</Async/this.drainQueues (https://advisor.forastaging.net/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "bbca6a77-f64a-4a9d-ac32-3574db64f74b",
+              "parentUUID": "a2aba7b3-0eed-4a33-bfd8-aa033924ebd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "25251978-e8da-4de5-a5c8-c1282a20e9e8",
+            "2d6559a4-7d9c-4479-acfe-70c82ad828a1",
+            "bbca6a77-f64a-4a9d-ac32-3574db64f74b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 50132,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
